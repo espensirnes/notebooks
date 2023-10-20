@@ -1,0 +1,15 @@
+svar/
+Thumbs.db
+unused/
+.ipynb_checkpoints/
+*.wpu
+*.wpr
+fig*.png
+world population.html
+BNP_levealder.html
+Tax and consumer surplus.html
+tromso.html
+Untitled*.ipynb
+rentebarometer.csv
+schedule.csv
+table.csv

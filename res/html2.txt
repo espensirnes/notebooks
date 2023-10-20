@@ -1,0 +1,26 @@
+    
+	var slideIndex = 1;
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    
+    show_img(slider.value);
+    
+    output.innerHTML = array[slider.value];
+    
+    function show_img(n) {
+      localStorage.swipe_enabled=0;
+      var i;
+      var x = document.getElementsByClassName("slides");
+    
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[n].style.display = "block";  
+      output.innerHTML = array[n];
+    }
+    
+    slider.oninput = function() {
+      show_img(this.value) ;
+    }
+</script>
+</html> 
