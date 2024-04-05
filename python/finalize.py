@@ -106,7 +106,7 @@ def recount_and_replace(fname,what):
     i=1
     n=0
     while True:
-        m=re.search(what+' (\d+)',s[n:])
+        m=re.search(what+r' (\d+)',s[n:])
         if m is None:
             break
         old=s[m.start()+n:m.end()+n]

@@ -13149,7 +13149,7 @@ div#notebook {
 	<div id="header_wrap" class="topbanner">
 		<div class="topbanner_container">
 			<h1 id="project_title">Python for samfunnsøkonomi</h1>
-			<h2 id="project_tagline">Forelesningsnotater</h2>
+			<h2 id="project_tagline">Forelesningsnotater - Espen Sirnes</h2>
 		</div>
 		<div class="uitlogo"><br><img src="../img/UiT_Logo_Bok_Hvit.png" width="250"></div>
 	</div>
@@ -13176,8 +13176,8 @@ div#notebook {
 			<br><br>
 			Relaterte kurs:<br><br>
 			<a href="https://uit-sok-1003-h23.github.io/">SOK-1003 Python Lab</a><br>
-			<a href="https://uit-sok-1005-v23.github.io/">SOK-1005 Datavitenskap for økonomer</a><br>
-			<a href="https://uit-sok-1006-v23.github.io/">SOK-1006 Mikroøkonomi</a><br>
+			<a href="https://uit-sok-1005-v24.github.io/">SOK-1005 Datavitenskap for økonomer</a><br>
+			<a href="https://uit-sok-1006-v24.github.io/">SOK-1006 Mikroøkonomi</a><br>
 		</div>
 	</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13205,7 +13205,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://github.com/"><img align="right" src="../img/github.png" style="padding:20px;"></a>
-Vi har fra før lært hvordan vi kloner et git-repositorie og hvordan vi dytter endringer dit. Men den kanskje viktigste funksjonen til git er som verktøy for å samarbeide om og koordinere arbeid med kode. I denne forelesningen skal vi se litt nærmere på hvordan vi bruker git til dette. *</p>
+Vi har fra før lært hvordan vi kloner et git-repositorie og hvordan vi dytter endringer dit. Men den kanskje viktigste funksjonen til git er som verktøy for å samarbeide om og koordinere arbeid med kode. I denne forelesningen skal vi se litt nærmere på hvordan vi bruker git til dette.</p>
 <p>For å forstå dette, oppretter vi et enkelt test-repositorie med en tekstfil, som vi kan teste git på.</p>
 
 </div>
@@ -13317,7 +13317,8 @@ git push
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="N%C3%A5r-konflikten-er-for-stor-og-omfattende-til-%C3%A5-redigere-i-teksten">N&#229;r konflikten er for stor og omfattende til &#229; redigere i teksten<a class="anchor-link" href="#N%C3%A5r-konflikten-er-for-stor-og-omfattende-til-%C3%A5-redigere-i-teksten">&#182;</a></h2><p>Av og til vil det være upraktisk å redigere i teksten, dersom endringene er for store og omfattende, eller dersom endringene for eksempel er i en jupyter-fil.</p>
 <p>Git er laget for å samarbeide om kode, som er lagret i vanlige tekstfiler. Formatet til *.ipynb-filene som jupyter lager er også kode, men vi ser den ikke når vi åpner dokumentet i jupyter. Når git setter inn tekst i jupyter-filer, slik som over, vil den blir ubrukelig.</p>
-<p>Den enkleste måten å løse slike situasjoner på, er å avbryte konfliktløsningen, omdøpe det lokale repositoriet og klone det originale fjernrepositoriet på på nytt. Du kan da åpne filen i det gamle klonede repositoriet og din lokale versjon samtidig, og sammenligne. Du kan så endre filen i det klonede repositoriet, eller bytte ut filen i fjernrepositoriet med den nyere lokale filen. Dette gjør du på følgende måte:</p>
+<p>Den enkleste måten å løse slike situasjoner på, er å avbryte konfliktløsningen, omdøpe det lokale repositoriet og klone det originale fjernrepositoriet på på nytt. Det er ikke helt &quot;etter boken&quot;, men å håndtere mer avanserte konflikter er det ikke plass til i dette kurset.</p>
+<p>Om du har klonet repositoriet på nytt kan du åpne filen i repoen på nett og lokalt samtidig, og sammenligne. Du kan så endre filen i det klonede repositoriet, eller bytte ut filen i fjernrepositoriet med den nyere lokale filen. Dette gjør du på følgende måte:</p>
 <ol>
 <li><p>Avbryt konfliktløsningen med <code>git merge --abort</code></p>
 </li>
@@ -13349,7 +13350,6 @@ git push
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Jobber du  med andre på github vil du ofte oppleve konflikter som over. Dersom det er konflikter</p>
 <p>Følgende arbeidsflyt anbefales for git:</p>
 <ol>
 <li>Kjør følgende kommandoer ofte:</li>
@@ -13457,7 +13457,7 @@ git pull
 <p>Du kan nå trykke på <img src="../img/run_vscode.png" alt="run debug" />-knappen oppe til venstre hver når du skal kjøre koden.</p>
 <p>For å kjøre spillet skriver du inn:</p>
 <pre><code>import blotto
-blotto.run(6,100)
+blotto.Run(6,100)
 </code></pre>
 <p>Du vil med stor sannsynlighet få en <code>ModuleNotFoundError</code> når du forsøker å laste <code>blotto</code>. Det skyldes i så fall at du ikke har installert alle pakkene du trenger. Om du har installert python riktig, for alle brukere, så kan du installere det du trenger med følgende kommandoer i kommandovinduet:</p>
 <pre><code>pip install tk
@@ -13494,10 +13494,11 @@ pip install numpy
     
     <span class="c1">#assigning 25 battalions to the first four battle fields:</span>
     <span class="n">battalions</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="mi">25</span>
-
+    
+    <span class="c1">#randomizing to make strategy less predictable</span>
+    <span class="n">battalions</span><span class="o">=</span><span class="n">battalions</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_fields</span><span class="p">)</span><span class="o">.</span><span class="n">argsort</span><span class="p">()]</span>
     
     <span class="c1">#asserting that all and no more than all battalions are used:</span>
-    <span class="n">battalions</span><span class="o">=</span><span class="n">battalions</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_fields</span><span class="p">)</span><span class="o">.</span><span class="n">argsort</span><span class="p">()]</span>
     <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">battalions</span><span class="p">)</span><span class="o">==</span><span class="n">n_battalions</span>
     
     <span class="k">return</span> <span class="n">battalions</span>
@@ -13544,9 +13545,15 @@ pip install numpy
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">computer_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">):</span>
     <span class="n">battalions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    
+    <span class="c1">#Will at present only work witih 100 battalions</span>
     <span class="n">battalions</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">8</span>
     <span class="n">battalions</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span>
     <span class="n">battalions</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span><span class="o">=</span><span class="mi">1</span>
+    
+    <span class="c1">#randomizing location to make strategy less predictable</span>
+    <span class="n">battalions</span><span class="o">=</span><span class="n">battalions</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_fields</span><span class="p">)</span><span class="o">.</span><span class="n">argsort</span><span class="p">()]</span>
+    
     <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">battalions</span><span class="p">)</span><span class="o">==</span><span class="n">n_battalions</span>
     <span class="k">return</span> <span class="n">battalions</span>
 </pre></div>
@@ -13588,17 +13595,37 @@ pip install numpy
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">call_battle</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">,</span> <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">call_battle</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span> <span class="n">n_battalions</span><span class="p">,</span> <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">):</span>
     <span class="n">c_battlions</span><span class="o">=</span><span class="n">computer_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">)</span>
     <span class="n">p_battlions</span><span class="o">=</span><span class="n">player_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">)</span>
-
+    
     <span class="n">diff</span><span class="o">=</span><span class="n">p_battlions</span><span class="o">-</span><span class="n">c_battlions</span>
     <span class="n">points</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">diff</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">diff</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
  
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">points</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">points</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">call_battle</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-1
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13621,7 +13648,7 @@ pip install numpy
     <span class="n">r</span><span class="o">=</span><span class="mi">0</span>
     <span class="n">record</span><span class="o">=</span><span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_tests</span><span class="p">):</span>
-        <span class="n">p</span><span class="o">=</span><span class="n">call_battle</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">,</span>
+        <span class="n">p</span><span class="o">=</span><span class="n">call_battle</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span> <span class="n">n_battalions</span><span class="p">,</span>
             <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">)</span>
         <span class="n">record</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
         <span class="n">r</span><span class="o">+=</span><span class="n">p</span>
@@ -13646,7 +13673,7 @@ pip install numpy
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>-0.79952</pre>
+<pre>-0.79813</pre>
 </div>
 
 </div>
@@ -13675,15 +13702,27 @@ Når du skal forsøke å lage best mulig strategi, kan det være lurt å benytte
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Oppgave:">Oppgave:<a class="anchor-link" href="#Oppgave:">&#182;</a></h1>
+<h1 id="Oppgaver:">Oppgaver:<a class="anchor-link" href="#Oppgaver:">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Forsøk å endre på funksjonen <code>player_strategy</code> slik at den blir best mulig (gjør gjerne endringer i <code>computer_strategy</code> også for å gi den best mulig konkurranse), og lagre strategien/funksjonen i en fil du kaller &quot;strategy.py&quot; i sok-1005-repositoriet. Koden vil bli kjørt mot den beste strategien til foreleser 100 000 ganger og får en score mellom -1 (alltid tap) og 1 (alltid seier). Du vil få vite hvordan du er rangert. Vinner vil bli kåret, og offentliggjort, om vinneren(e) ønsker det.</p>
+<ol start="3">
+<li><p>Gå sammen to eller flere og gjør følgende:
+ a) Lag et repositorie 'blottokopi' på github som deles med alle
+ b) Klon repositoriet og kopier innholdet i blottorepositoriet til 'blottokopi'
+ c) Nå kan dere løse oppgavene under på hver deres PC, men arbeide på samme dokument
+ d) Forsøk å lage og løse konflikter, for å se hvordan det fungerer</p>
+</li>
+<li><p>Forsøk å endre på funksjonen <code>player_strategy</code> slik at den blir best mulig (gjør gjerne endringer i <code>computer_strategy</code> også for å gi den best mulig konkurranse), og lagre strategien/funksjonen i en fil du kaller &quot;strategy.py&quot; i sok-1005-repositoriet. Koden vil bli kjørt mot den beste strategien til foreleser 100 000 ganger og får en score mellom -1 (alltid tap) og 1 (alltid seier). Du vil få vite hvordan du er rangert.</p>
+</li>
+</ol>
 <p>Det må være gjort større endringer i funksjonen enn bare å endre på antall bataljoner i <code>player_strategy</code>, for å få godkjent.</p>
+<ol start="2">
+<li>Endre <code>computer_strategy</code> og <code>player_strategy</code> slik at du faktisk kan angi vilkårlig hvilket antall battalioner og slagmarker du skal ha (nå vil du få en <code>assert error</code> om du oppgir noe annet enn hhv. 100 og 6.</li>
+</ol>
 
 </div>
 </div>
