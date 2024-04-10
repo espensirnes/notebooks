@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
 import time
+import re
 	
 def scrape(url):
 	#get the html from the url
@@ -18,7 +20,7 @@ def scrape(url):
 
 
 	#save the result:
-	f=open('table.csv','w')
+	f=open('res/table.csv','w')
 	for row in t:
 		f.write(';'.join(row)+'\n')
 	f.close()
@@ -30,13 +32,17 @@ def get_page(url):
 	which we are interested in"""
 	#open the url in browser
 	#If SessionNotCreatedException, update chrome. 
-	driver = webdriver.Chrome(ChromeDriverManager().install())
+	path = ChromeDriverManager().install()
+	driver = webdriver.Chrome(service=webdriver.ChromeService(path))
 	driver.get(url)
 
 	#sometimes the page is not loaded properly, so repeating until we have fetched a 
 	#postive length string:
 	for i in range(1000):
-		s=find_string_between(driver.page_source, '<table id="datatable">','</tfoot></table>')
+		s = find_string_between(driver.page_source, 
+						'<table class="dx-datagrid-table dx-datagrid-table-fixed" .*?>',
+						'</table>', 
+						1)
 		if len(s)>0:
 			break
 		time.sleep(1)
@@ -60,7 +66,7 @@ def html_to_table(tbl):
 
 		#iterate over cells 
 		for cell in cells:
-			cell=format(cell)
+			cell = format(cell)
 			r.append(cell)
 		a.append(r)
 	return a
@@ -73,22 +79,26 @@ def format(cell):
 		return cell.text
 	if len(cell.content)==0:
 		return ''
-	s=''
-	s=' '.join([str(c) for c in cell.content])
+	s = ''
+	s = ' '.join([str(c) for c in cell.content])
 
-	#if there is unwanted contents, replace it here:
-	s=s.replace('\xa0','')
-	s=s.replace('\n','')
+	#if there is undesired contents, replace it here:
+	s = s.replace('\xa0','')
+	s = s.replace('\n','')
 	return s
 
-def find_string_between(string,a,b):
-	"returns the substring of string between expressions a and b" 
-	a=string.find(a)
-	b=string.find(b)+len(b)
-	return string[a:b]
+def find_string_between(string,a,b,n):
+	"returns the substring of string between expressions a and b, occurence n" 
+	a = re.findall(a, string)
+	if len(a)==0:
+		return ''
+	a = string.index(a[n])
+	b = re.findall(b, string[a:])[0]
+	b = string[a:].index(b)
+	return string[a:a+b]
 
 
 
 
 
-scrape('https://www.nordpoolgroup.com/Market-data1/Dayahead/Area-Prices/NO/Monthly/?view=table')
+scrape('https://data.nordpoolgroup.com/auction/day-ahead/prices?deliveryDate=2024-04-02&currency=EUR&aggregation=Daily&deliveryAreas=EE,LT,LV,AT,BE,FR,GER,NL,PL,DK1,DK2,FI,NO1,NO2,NO3,NO4,NO5,SE1,SE2,SE3,SE4,SYS')
