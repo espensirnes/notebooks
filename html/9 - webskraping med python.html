@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>9 - webskraping med python</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-<style type="text/css">
+<html lang="en">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>9 - webskraping med python</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><link rel="icon" type="image/x-icon" href="../img/favicon.ico"><style type="text/css">
   pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -25,6 +23,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #008400 } /* Generic.Inserted */
@@ -81,9 +80,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
-
-
-
 <style type="text/css">
 /*!
 *
@@ -13111,9 +13107,9 @@ div#notebook {
 }
 </style>
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     init_mathjax = function() {
         if (window.MathJax) {
         // MathJax loaded
@@ -13143,7 +13139,7 @@ div#notebook {
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
 
 	<div id="header_wrap" class="topbanner">
@@ -13155,8 +13151,9 @@ div#notebook {
 	</div>
 	
 	
-<div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">	<div class="sidenav_container">
+<main>
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
 			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
@@ -13179,135 +13176,123 @@ div#notebook {
 			<a href="https://uit-sok-1005-v24.github.io/">SOK-1005 Datavitenskap for økonomer</a><br>
 			<a href="https://uit-sok-1006-v24.github.io/">SOK-1006 Mikroøkonomi</a><br>
 		</div>
-	</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+	</div><div class="cell border-box-sizing text_cell rendered" id="cell-id=14d1a27b"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="8%20-%20Git,%20IDE%27er%20og%20et%20lite%20spill.html">&lt; Forrige</a>     |     <a href="10%20-%20statsmodels.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="8%20-%20git%2C%20pythonfiler%20og%20IDE.html">&lt; Forrige</a>     |     <a href="10%20-%20statsmodels.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">¶</a></h5>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=f0d23649-641d-4bc9-b58e-7186f173b629"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 9 - webskraping med python </span></p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=466cab53"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="HTML-kode">HTML-kode<a class="anchor-link" href="#HTML-kode">&#182;</a></h1><p>Når vi skal skrape nettsider, analyserer vi &quot;kildekoden&quot; som ligger bak nettsiden. I de fleste nettleser kan du enkelt se kildekoden ved å høyreklikke på siden og velge &quot;view page source&quot; eller lignende. I denne leksjonen skal vi begynne med å skrape rentebarometeret til Norsk Famileøkonomi. For å se hva vi skal skrape kan du derfor gå til <a href="https://www.norskfamilie.no/barometre/rentebarometer/">https://www.norskfamilie.no/barometre/rentebarometer/</a>, høyreklikke og velge å se kildekoden.</p>
-<p>Elementer er markert i en nettside med såkalte &quot;html-tagger&quot;. For eksempel lager du kursiv på en nettside ved å skrive <code>&lt;i&gt;kursiv&lt;/i&gt;</code>. Denne teksten er skrevet i &quot;markdown&quot;, som også forstår html-tagger. <i>Om du leser dette interaktivt i en jupyterfil kan du dobbelklikke her og se at denne setningen er skrevet inne i kursivtagger</i>.</p>
-<p>Når vi skraper websider er innholdet vi er interessert i veldig ofte inne i en tabell. Det er det her også. Gjør et tekstsøk i kildekoden etter &quot;&lt;table&quot;. Det finnes kun én plass i dokumentet, og markerer begynnelsen på tabellen. Søker du én gang til med &quot;&lt;/table&gt;&quot; finner du hvor tabellen ender.</p>
+<h1 id="HTML-kode">HTML-kode<a class="anchor-link" href="#HTML-kode">¶</a></h1><p>Når vi skal skrape nettsider, analyserer vi "kildekoden" som ligger bak nettsiden. I de fleste nettleser kan du enkelt se kildekoden ved å høyreklikke på siden og velge "view page source" eller lignende. I denne leksjonen skal vi begynne med å skrape rentebarometeret til Norsk Famileøkonomi. For å se hva vi skal skrape kan du derfor gå til <a href="https://www.norskfamilie.no/barometre/rentebarometer/">https://www.norskfamilie.no/barometre/rentebarometer/</a>, høyreklikke og velge å se kildekoden.</p>
+<p>Elementer er markert i en nettside med såkalte "html-tagger". For eksempel lager du kursiv på en nettside ved å skrive <code>&lt;i&gt;kursiv&lt;/i&gt;</code>. Denne teksten er skrevet i "markdown", som også forstår html-tagger. <i>Om du leser dette interaktivt i en jupyterfil kan du dobbelklikke her og se at denne setningen er skrevet inne i kursivtagger</i>.</p>
+<p>Når vi skraper websider er innholdet vi er interessert i veldig ofte inne i en tabell. Det er det her også. Gjør et tekstsøk i kildekoden etter "&lt;table". Det finnes kun én plass i dokumentet, og markerer begynnelsen på tabellen. Søker du én gang til med "&lt;/table&gt;" finner du hvor tabellen ender.</p>
 <p>I mellom disse taggene er det en god del kode som kanskje ser veldig komplisert ut. Men vi trenger kun å forholde oss til følgende tre typer tagger:</p>
 <ul>
 <li><code>&lt;tr&gt;</code>: rad</li>
 <li><code>&lt;th&gt;</code>: overskrift</li>
 <li><code>&lt;td&gt;</code>: celle</li>
 </ul>
-<p>For å hente ut innholdet i tabellen må vi altså søke etter disse taggene, etter at vi har identifisere teksten mellom &quot;tabell&quot;-taggene. Det finnes heldigvis et veldig godt verktøy for dette i python, som heter <code>BeutifulSoup</code> (<code>pip install beautifulsoup4</code> i kommandovinduet om det ikke er installert).</p>
+<p>For å hente ut innholdet i tabellen må vi altså søke etter disse taggene, etter at vi har identifisere teksten mellom "tabell"-taggene. Det finnes heldigvis et veldig godt verktøy for dette i python, som heter <code>BeutifulSoup</code> (<code>pip install beautifulsoup4</code> i kommandovinduet om det ikke er installert).</p>
 <p>Med dette verktøyet kan du enkelt finne de taggene du ønsker. Vi starter med å finne selve tabellen, etter å ha bruke pakken <code>requests</code> til å laste ned html-filen:</p>
-<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
+<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=1b8a0b91">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="k">def</span> <span class="nf">fetch_html_tables</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="s2">&quot;Returns a list of tables in the html of url&quot;</span>
+    <span class="s2">"Returns a list of tables in the html of url"</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="n">bs</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-    <span class="n">tables</span><span class="o">=</span><span class="n">bs</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
+    <span class="n">tables</span><span class="o">=</span><span class="n">bs</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'table'</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">tables</span>
 
-<span class="n">tables</span><span class="o">=</span><span class="n">fetch_html_tables</span><span class="p">(</span><span class="s1">&#39;https://www.norskfamilie.no/barometre/rentebarometer/&#39;</span><span class="p">)</span>
+<span class="n">tables</span><span class="o">=</span><span class="n">fetch_html_tables</span><span class="p">(</span><span class="s1">'https://www.norskfamilie.no/barometre/rentebarometer/'</span><span class="p">)</span>
 <span class="n">table_html</span><span class="o">=</span><span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1">#printing top</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table_html</span><span class="p">)[:</span><span class="mi">1000</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;table class=&#34;table table-striped table-hover barometer&#34;&gt;
+<pre>&lt;table class="table table-striped table-hover barometer"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt; &lt;/th&gt;
 &lt;th&gt;Bank&lt;/th&gt;
 &lt;th&gt; &lt;/th&gt;
-&lt;th class=&#34;d-none d-sm-table-cell&#34;&gt;Navn&lt;/th&gt;
+&lt;th class="d-none d-sm-table-cell"&gt;Navn&lt;/th&gt;
 &lt;th&gt;Nominell&lt;/th&gt;
-&lt;th class=&#34;d-none d-sm-table-cell&#34;&gt;Sikkerhets&lt;br/&gt;gebyr&lt;/th&gt;
-&lt;th class=&#34;d-none d-sm-table-cell&#34;&gt;Etablerings&lt;br/&gt;gebyr&lt;/th&gt;
-&lt;th class=&#34;d-none d-sm-table-cell&#34;&gt;Termin&lt;/th&gt;
+&lt;th class="d-none d-sm-table-cell"&gt;Sikkerhets&lt;br/&gt;gebyr&lt;/th&gt;
+&lt;th class="d-none d-sm-table-cell"&gt;Etablerings&lt;br/&gt;gebyr&lt;/th&gt;
+&lt;th class="d-none d-sm-table-cell"&gt;Termin&lt;/th&gt;
 &lt;th&gt;Effektiv&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;SpareBank 1 Nordmøre&lt;/td&gt;
+&lt;td&gt;Høland og Setskog Sparebank&lt;/td&gt;
 &lt;td&gt;
-&lt;button class=&#34;popover_info btn btn-none&#34; data-html=&#34;true&#34; data-placement=&#34;left&#34; data-toggle=&#34;tooltip&#34; title=&#34;Nominell: &amp;lt;strong&amp;gt;1,35&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Sikkerhetsgebyr: &amp;lt;strong&amp;gt;1 200&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Etableringsgebyr: &amp;lt;strong&amp;gt;0&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Termingebyr: &amp;lt;strong&amp;gt;75&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Effektiv rente: &amp;lt;strong&amp;gt;1,45&amp;lt;/strong&amp;gt;&#34; type=&#34;button&#34;&gt;
-&lt;i class=&#34;fa fa-info-circle&#34;&gt;&lt;/i&gt;
+&lt;button class="popover_info btn btn-none" data-html="true" data-placement="left" data-toggle="tooltip" title="Nominell: &amp;lt;strong&amp;gt;4,90&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Sikkerhetsgebyr: &amp;lt;strong&amp;gt;0&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Etableringsgebyr: &amp;lt;strong&amp;gt;0&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Termingebyr: &amp;lt;strong&amp;gt;75&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Effektiv rente: &amp;lt;strong&amp;gt;5,11&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;Energimerke A eller B, samt kjøp av bolig i Aurskog-Høland." type="button"&gt;
+&lt;i class="fa fa-info-circle"&gt;&lt;/i&gt;
 &lt;/button&gt;
 &lt;/td&gt;
-&lt;td class=&#34;d-none d-sm-table-cell&#34;&gt;Grønt førstehjemslån&lt;/td&gt;
-&lt;td&gt;1,35&lt;/td&gt;
-&lt;td class=&#34;d-none d-sm-table-cell&#34;&gt;1 200&lt;
+&lt;td class="d-none d-sm-table-cell"
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=00466c08"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="F%C3%A5-tak-i-HTML-tabellene">F&#229; tak i HTML-tabellene<a class="anchor-link" href="#F%C3%A5-tak-i-HTML-tabellene">&#182;</a></h1><p>Det vi får ut med <code>bs.find_all('table')</code> er altså en liste med alle partier i teksten med matchende <code>&lt;table&gt;</code>-<code>&lt;/table&gt;</code>-tagger. I dette dokumentet er det bare én tabell, så listen har bare ett element. Vi må nå søke videre inne i tabellen etter innholdstaggene. Vi bruker samme funksjon til det. Her er to funksjoner som sammen finner innholdstaggene og returnerer en tabell:</p>
-<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
+<h1 id="F%C3%A5-tak-i-HTML-tabellene">Få tak i HTML-tabellene<a class="anchor-link" href="#F%C3%A5-tak-i-HTML-tabellene">¶</a></h1><p>Det vi får ut med <code>bs.find_all('table')</code> er altså en liste med alle partier i teksten med matchende <code>&lt;table&gt;</code>-<code>&lt;/table&gt;</code>-tagger. I dette dokumentet er det bare én tabell, så listen har bare ett element. Vi må nå søke videre inne i tabellen etter innholdstaggene. Vi bruker samme funksjon til det. Her er to funksjoner som sammen finner innholdstaggene og returnerer en tabell:</p>
+<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=777e87b1">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">html_to_table</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
-    <span class="s2">&quot;Returns the table defined in html as a list&quot;</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">html_to_table</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
+    <span class="s2">"Returns the table defined in html as a list"</span>
     <span class="c1">#defining the table:</span>
     <span class="n">table</span><span class="o">=</span><span class="p">[]</span>
     <span class="c1">#iterating over all rows</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'tr'</span><span class="p">):</span>
         <span class="n">r</span><span class="o">=</span><span class="p">[]</span>
         <span class="c1">#finding all cells in each row:</span>
-        <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
+        <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'td'</span><span class="p">)</span>
         
         <span class="c1">#if no cells are found, look for headings</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-            <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
+            <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'th'</span><span class="p">)</span>
             
         <span class="c1">#iterate over cells:</span>
         <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">:</span>
@@ -13319,19 +13304,19 @@ div#notebook {
     <span class="k">return</span> <span class="n">table</span>
 
 <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="n">cell</span><span class="p">):</span>
-    <span class="s2">&quot;Returns a string after converting bs4 object cell to clean text&quot;</span>
+    <span class="s2">"Returns a string after converting bs4 object cell to clean text"</span>
     <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">s</span><span class="o">=</span><span class="n">cell</span><span class="o">.</span><span class="n">text</span>
     <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="s1">''</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">s</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">])</span>
+        <span class="n">s</span><span class="o">=</span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">])</span>
         
     <span class="c1">#here you can add additional characters/strings you want to </span>
     <span class="c1">#remove, change punctuations or format the string in other</span>
     <span class="c1">#ways:</span>
-    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\xa0</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'</span><span class="se">\xa0</span><span class="s1">'</span><span class="p">,</span><span class="s1">''</span><span class="p">)</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span><span class="s1">''</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">s</span>
 
 <span class="n">table</span><span class="o">=</span><span class="n">html_to_table</span><span class="p">(</span><span class="n">table_html</span><span class="p">)</span>
@@ -13339,134 +13324,95 @@ div#notebook {
 <span class="c1">#printing top</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table</span><span class="p">)[:</span><span class="mi">1000</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[&#39;&#39;, &#39;Bank&#39;, &#39;&#39;, &#39;Navn&#39;, &#39;Nominell&#39;, &#39;Sikkerhetsgebyr&#39;, &#39;Etableringsgebyr&#39;, &#39;Termin&#39;, &#39;Effektiv&#39;], [&#39;1&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,35&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,45&#39;], [&#39;2&#39;, &#39;Statens pensjonskasse&#39;, &#39;&#39;, &#39;Boliglån inntil 80 %&#39;, &#39;1,49&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,56&#39;], [&#39;3&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Grønt Boliglån&#39;, &#39;1,55&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,56&#39;], [&#39;4&#39;, &#39;Etne Sparebank&#39;, &#39;&#39;, &#39;&#34;Him te Etne&#34; - lånet&#39;, &#39;1,55&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,62&#39;], [&#39;5&#39;, &#39;SpareBank 1 SMN&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,68&#39;], [&#39;6&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,70&#39;], [&#39;7&#39;, &#39;Høland og Setskog Sparebank&#39;, &#39;&#39;, &#39;Grønt Boliglån spesial&#39;, &#39;1,64&#39;, &#39;0&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,73&#39;], [&#39;8&#39;, &#39;Orkla Sparebank&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,65&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,74&#39;], [&#39;9&#39;, &#39;KLP Banken AS&#39;, &#39;&#39;, &#39;Grønt boliglån medlem&#39;, &#39;1,70&#39;, &#39;0&#39;, &#39;0&#39;, &#39;35&#39;, &#39;1,76&#39;], [&#39;10&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Boliglån 50%&#39;, &#39;1,75&#39;, &#39;500&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,76&#39;], [&#39;11&#39;, &#39;Oslo 
+<pre>[['', 'Bank', '', 'Navn', 'Nominell', 'Sikkerhetsgebyr', 'Etableringsgebyr', 'Termin', 'Effektiv'], ['1', 'Høland og Setskog Sparebank', '', 'Grønt Boliglån spesial', '4,90', '0', '0', '75', '5,11'], ['2', 'Statens pensjonskasse', '', 'Boliglån inntil 80 %', '4,99', '0', '0', '50', '5,16'], ['3', 'Nordnet Bank (Nordnet Bank AB)', '', 'Boliglån Private Banking (nivå 4)', '5,14', '0', '0', '0', '5,26'], ['4', 'Romsdal Sparebank', '', 'Grønt boliglån', '5,15', '1000', '2500', '60', '5,35'], ['5', 'Oppdalsbanken', '', 'Grønt boliglån innenfor 50%', '5,20', '1200', '0', '55', '5,40'], ['6', 'Ørskog Sparebank', '', 'Grønt bustadlån', '5,20', '1000', '0', '70', '5,41'], ['7', 'Høland og Setskog Sparebank', '', 'Grønt Boliglån', '5,20', '0', '0', '75', '5,42'], ['8', 'Landkreditt Bank AS', '', 'Grønt Boliglån 50%', '5,29', '500', '0', '0', '5,42'], ['9', 'Berg Sparebank', '', 'Grønt Boliglån 75%', '5,24', '1000', '0', '50', '5,43'], ['10', 'Vekselbanken', '', 'Grønt bustadlån', '5,25', '0', '0
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=7e208de8-e45e-49eb-967d-d24b8f331543"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Den første funksjonen itererer over tabellceller, mens den andre funksjonen konverterer innholdet fra et bs4-objekt med html-kode til leselig tekst.</p>
-<h1 id="Lagre-tabellen">Lagre tabellen<a class="anchor-link" href="#Lagre-tabellen">&#182;</a></h1><p>Vi har nå skrapet siden, og hentet ut tabellen. For å gjøre den mer leselig, kan vi lagre den som en fil. Når vi lager filer i python bruker vi den innebygde <code>open</code>-funksjonen. Om vi kaller filen for &quot;rentebarometer.csv&quot;, kan vi opprette filen ved å kjøre <code>f=open('rentebarometer.csv','w')</code>. Strengen <code>'w'</code> betyr at vi åpner filen for skriving (<em>writing</em>, i motsetning til lesing/<em>reading</em> markert med <code>'r'</code>. Vi fyller filen med innhold med <code>f.write()</code>.</p>
+<h1 id="Lagre-tabellen">Lagre tabellen<a class="anchor-link" href="#Lagre-tabellen">¶</a></h1><p>Vi har nå skrapet siden, og hentet ut tabellen. For å gjøre den mer leselig, kan vi lagre den som en fil. Når vi lager filer i python bruker vi den innebygde <code>open</code>-funksjonen. Om vi kaller filen for "rentebarometer.csv", kan vi opprette filen ved å kjøre <code>f=open('rentebarometer.csv','w')</code>. Strengen <code>'w'</code> betyr at vi åpner filen for skriving (<em>writing</em>, i motsetning til lesing/<em>reading</em> markert med <code>'r'</code>. Vi fyller filen med innhold med <code>f.write()</code>.</p>
 <p>For å skille kolonnene skal vi her bruke semikolon ';'. Python har en enkel måte å konvertere en liste til en streng med skilletegn. En tar utgangspunkt i skilletegnet, og bruker metoden <code>join()</code> på det. For eksempel:</p>
-<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=2b65a199">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="s1">';'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[3]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;;Bank;;Navn;Nominell;Sikkerhetsgebyr;Etableringsgebyr;Termin;Effektiv&#39;</pre>
-</div>
-
-</div>
-
+<pre>';Bank;;Navn;Nominell;Sikkerhetsgebyr;Etableringsgebyr;Termin;Effektiv'</pre>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=288e475d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå åpne filen for skriving og iterere over rader og skrive dem til filen.</p>
-<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=51d8ba52">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">save_data</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">table</span><span class="p">):</span>
-    <span class="s2">&quot;Saves table to file_name&quot;</span>
-    <span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">save_data</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">table</span><span class="p">):</span>
+    <span class="s2">"Saves table to file_name"</span>
+    <span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="s1">'w'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">';'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="o">+</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="n">save_data</span><span class="p">(</span><span class="s1">&#39;rentebarometer.csv&#39;</span><span class="p">,</span><span class="n">table</span><span class="p">)</span>
+<span class="n">save_data</span><span class="p">(</span><span class="s1">'rentebarometer.csv'</span><span class="p">,</span><span class="n">table</span><span class="p">)</span>
 </pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan ta en kikk på dataene med Pandas (<code>encoding='latin1'</code> er for å få med æ,ø,å):</p>
-<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=637b94af">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;rentebarometer.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'rentebarometer.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">';'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result"><div>
-<style scoped>
+<style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -13480,178 +13426,194 @@ div#notebook {
     }
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Bank</th>
-      <th>Unnamed: 2</th>
-      <th>Navn</th>
-      <th>Nominell</th>
-      <th>Sikkerhetsgebyr</th>
-      <th>Etableringsgebyr</th>
-      <th>Termin</th>
-      <th>Effektiv</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>SpareBank 1 Nordmøre</td>
-      <td>NaN</td>
-      <td>Grønt førstehjemslån</td>
-      <td>1,35</td>
-      <td>1200</td>
-      <td>0</td>
-      <td>75</td>
-      <td>1,45</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Statens pensjonskasse</td>
-      <td>NaN</td>
-      <td>Boliglån inntil 80 %</td>
-      <td>1,49</td>
-      <td>0</td>
-      <td>0</td>
-      <td>50</td>
-      <td>1,56</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Landkreditt Bank AS</td>
-      <td>NaN</td>
-      <td>Grønt Boliglån</td>
-      <td>1,55</td>
-      <td>1000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1,56</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Etne Sparebank</td>
-      <td>NaN</td>
-      <td>Him te Etne - lånet</td>
-      <td>1,55</td>
-      <td>0</td>
-      <td>0</td>
-      <td>50</td>
-      <td>1,62</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>SpareBank 1 SMN</td>
-      <td>NaN</td>
-      <td>Grønt førstehjemslån</td>
-      <td>1,60</td>
-      <td>1200</td>
-      <td>0</td>
-      <td>60</td>
-      <td>1,68</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>336</td>
-      <td>Nordax Bank AB (publ)</td>
-      <td>NaN</td>
-      <td>Nordax Boliglån</td>
-      <td>5,99</td>
-      <td>0</td>
-      <td>10000</td>
-      <td>35</td>
-      <td>6,20</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>337</td>
-      <td>Danske Bank</td>
-      <td>NaN</td>
-      <td>Toppfinansiering</td>
-      <td>6,20</td>
-      <td>1000</td>
-      <td>0</td>
-      <td>45</td>
-      <td>6,44</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>338</td>
-      <td>INSTABANK ASA</td>
-      <td>NaN</td>
-      <td>Lån med sikkerhet</td>
-      <td>6,70</td>
-      <td>0</td>
-      <td>5000</td>
-      <td>50</td>
-      <td>6,97</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>339</td>
-      <td>Kraft Bank ASA</td>
-      <td>NaN</td>
-      <td>Refinansieringslån med sikkerhet</td>
-      <td>6,95</td>
-      <td>0</td>
-      <td>0</td>
-      <td>75</td>
-      <td>7,27</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>340</td>
-      <td>Kraft Bank ASA</td>
-      <td>NaN</td>
-      <td>2. prioritetslån</td>
-      <td>7,50</td>
-      <td>0</td>
-      <td>0</td>
-      <td>75</td>
-      <td>7,86</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Unnamed: 0</th>
+<th>Bank</th>
+<th>Unnamed: 2</th>
+<th>Navn</th>
+<th>Nominell</th>
+<th>Sikkerhetsgebyr</th>
+<th>Etableringsgebyr</th>
+<th>Termin</th>
+<th>Effektiv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>Høland og Setskog Sparebank</td>
+<td>NaN</td>
+<td>Grønt Boliglån spesial</td>
+<td>4,90</td>
+<td>0</td>
+<td>0</td>
+<td>75</td>
+<td>5,11</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>Statens pensjonskasse</td>
+<td>NaN</td>
+<td>Boliglån inntil 80 %</td>
+<td>4,99</td>
+<td>0</td>
+<td>0</td>
+<td>50</td>
+<td>5,16</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>Nordnet Bank (Nordnet Bank AB)</td>
+<td>NaN</td>
+<td>Boliglån Private Banking (nivå 4)</td>
+<td>5,14</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5,26</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>Romsdal Sparebank</td>
+<td>NaN</td>
+<td>Grønt boliglån</td>
+<td>5,15</td>
+<td>1000</td>
+<td>2500</td>
+<td>60</td>
+<td>5,35</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>Oppdalsbanken</td>
+<td>NaN</td>
+<td>Grønt boliglån innenfor 50%</td>
+<td>5,20</td>
+<td>1200</td>
+<td>0</td>
+<td>55</td>
+<td>5,40</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>405</th>
+<td>406</td>
+<td>Kraft Bank ASA</td>
+<td>NaN</td>
+<td>Refinansieringslån med sikkerhet</td>
+<td>8,00</td>
+<td>0</td>
+<td>0</td>
+<td>75</td>
+<td>8,40</td>
+</tr>
+<tr>
+<th>406</th>
+<td>407</td>
+<td>INSTABANK ASA</td>
+<td>NaN</td>
+<td>Lån med sikkerhet</td>
+<td>8,10</td>
+<td>0</td>
+<td>5000</td>
+<td>50</td>
+<td>8,47</td>
+</tr>
+<tr>
+<th>407</th>
+<td>408</td>
+<td>MYBANK ASA</td>
+<td>NaN</td>
+<td>Omstartslån mybank</td>
+<td>8,50</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>8,84</td>
+</tr>
+<tr>
+<th>408</th>
+<td>409</td>
+<td>Bluestep Bank AB (publ), filial Oslo</td>
+<td>NaN</td>
+<td>Bluestep Boliglån</td>
+<td>8,60</td>
+<td>0</td>
+<td>20000</td>
+<td>25</td>
+<td>8,98</td>
+</tr>
+<tr>
+<th>409</th>
+<td>410</td>
+<td>Kraft Bank ASA</td>
+<td>NaN</td>
+<td>2. prioritetslån</td>
+<td>9,50</td>
+<td>0</td>
+<td>0</td>
+<td>75</td>
+<td>10,02</td>
+</tr>
+</tbody>
 </table>
-<p>340 rows × 9 columns</p>
+<p>410 rows × 9 columns</p>
 </div></div>
-
-</div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=13fe7b05-171b-440e-9b6c-dbe8c4cf8b71">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=5e599b25"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="En-funksjon-som-skraper-alle-tabeller-p%C3%A5-en-side">En funksjon som skraper alle tabeller p&#229; en side<a class="anchor-link" href="#En-funksjon-som-skraper-alle-tabeller-p%C3%A5-en-side">&#182;</a></h1><p>Vi kan sammenfatte stegene over i én funksjon, som anvender</p>
-<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
+<p>Vi kan ta en kikk på dataene med Pandas (på windows må du kanskje ta med <code>encoding='latin1'</code> som argument for å få med æ,ø,å):</p>
+<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=9192af14"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="En-funksjon-som-skraper-alle-tabeller-p%C3%A5-en-side">En funksjon som skraper alle tabeller på en side<a class="anchor-link" href="#En-funksjon-som-skraper-alle-tabeller-p%C3%A5-en-side">¶</a></h1><p>Vi kan sammenfatte stegene over i én funksjon, som anvender</p>
+<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=6c945aa9">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="k">def</span> <span class="nf">scrape</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
@@ -13666,123 +13628,98 @@ div#notebook {
     <span class="n">save_data</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">table</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">table</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=8b1948b2"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Med denne koden kan vi nå skrape hvilken som helst nettside med tabeller vi ønsker å få tak i. For eksempel om vi ønsker å hente timeplanen til kurset:</p>
-<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
+<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=c38d9a56">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://timeplan.uit.no/emne_timeplan.php?sem=22v&amp;module[]=SOK-1005-1&#39;</span>
-<span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;schedule.csv&#39;</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="p">(</span><span class="s1">'https://timeplan.uit.no/'</span>
+<span class="s1">'emne_timeplan.php?sem=24v&amp;fag=&amp;module[]=SOK-1005-1#week-15'</span><span class="p">)</span>
+<span class="n">file_name</span><span class="o">=</span><span class="s1">'schedule.csv'</span>
 
 <span class="n">table</span><span class="o">=</span><span class="n">scrape</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">file_name</span><span class="p">)</span>
 
-<span class="n">s</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">])</span>
+<span class="n">s</span><span class="o">=</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">])</span>
 
 
 <span class="c1">#printing top</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)[:</span><span class="mi">1000</span><span class="p">])</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Uke  2	Mandag  10.01.2022	Tirsdag  11.01.2022	Onsdag  12.01.2022	Torsdag  13.01.2022	Fredag  14.01.2022
+<pre>Uke  2	Mandag  08.01.2024	Tirsdag  09.01.2024	Onsdag  10.01.2024	Torsdag  11.01.2024	Fredag  12.01.2024
 08:00					
 09:00					
 10:00					
 11:00					
-12:00					
-13:00					
-14:00				Aktiviteter i tidsrommet 14:15-16:0014:15-16:00VIRTUELT _Digital undervisningSOK-1005-1ForelesningØ. Myrland	14:15-16:00	VIRTUELT _Digital undervisning	SOK-1005-1	Forelesning	Ø. Myrland		
-14:15-16:00	VIRTUELT _Digital undervisning
+12:00					Aktiviteter i tidsrommet 12:15-14:0012:15-14:00HHT 01.202SOK-1005-1ForelesningD.G. KidaneØ. MyrlandE. Sirnes	12:15-14:00	HHT 01.202	SOK-1005-1	Forelesning	D.G. KidaneØ. MyrlandE. Sirnes	
+12:15-14:00	HHT 01.202
 SOK-1005-1	Forelesning
-Ø. Myrland	
-15:00				
+D.G. KidaneØ. MyrlandE. Sirnes	
+13:00				
+14:00					
+15:00					
 16:00					
-14:15-16:00	VIRTUELT _Digital undervisning
+12:15-14:00	HHT 01.202
 SOK-1005-1	Forelesning
-Ø. Myrland	
-Uke  3	Mandag  17.01.2022	Tirsdag  18.01.2022	Onsdag  19.01.2022	Torsdag  20.01.2022	Fredag  21.01.2022
+D.G. KidaneØ. MyrlandE. Sirnes	
+Uke  3	Mandag  15.01.2024	Tirsdag  16.01.2024	Onsdag  17.01.2024	Torsdag  18.01.2024	Fredag  19.01.2024
 08:00					
 09:00					
 10:00					
 11:00					
-12:00					
-13:00					
-14:00				Aktiviteter i tidsrommet 14:15-16:0014:15-16:00VIRTUELT _Digital undervisningSOK-1005-1ForelesningØ. Myrland	14:15-16:00	VIRTUELT _Digital undervisning	SOK-1005-1	Forelesning	Ø. Myrland		
-14:15-16:00	VIRTUELT _Digital undervisning
-SOK-1005-1	Forelesning
-Ø. Myrland	
-15:00				
-1
+12:00		Aktiviteter i tidsrommet 12:15-14:0012:15-14:00HHT 02.119SOK-1005-1ForelesningKontortid med studentassistent SOK-1005 og SOK-1006	12:15-14:00	HHT 02.119	SOK-1005-1	ForelesningKontortid med studentassistent SOK-1005 og SOK-1006					Aktiviteter i tidsrommet 12:15-14:0012:15-14:00HHT 01.202SOK-1005-1For
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=8ddeedf2"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">N&#229;r nettsiden ikke er "vennligsinnet"<a class="anchor-link" href="#N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">&#182;</a></h1><p>Det er ikke alle nettsideeiere som synes det er greit at vi skraper nettsidene deres. For ordens skyld så er det altså helt lovlig å skrape nettsider. Når noen legger ut data på en nettside har de offentliggjort dataene, og kan ikke bestemme hvordan dataene skal leses. Dette gjelder selv om de legger ut beskjed om noe annet.</p>
-<p>Det som kanskje <em>kan</em> være ulovlig, er å videreformidle dataene kommersielt.</p>
+<h1 id="N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">Når nettsiden ikke er "vennligsinnet"<a class="anchor-link" href="#N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">¶</a></h1><p>Det er ikke alle nettsideeiere som synes det er greit at vi skraper nettsidene deres. For ordens skyld så er det altså helt lovlig å skrape nettsider. Når noen legger ut data på en nettside har de offentliggjort dataene, og kan ikke bestemme hvordan dataene skal leses. Dette gjelder selv om de legger ut beskjed om noe annet.</p>
+<p>Det som <em>kan</em> være ulovlig, er å videreformidle dataene.</p>
 <p>Når nettsiden er vanskelig å skrape, er <em>selenium</em> av google en veldig nyttig pakke. Med den kan koden din opptre som en vanlig bruker. Så lenge du kan se dataene på skjermen din, bør det da i prinsippet være mulig å skrape enhver side.</p>
 <p>Vi har ikke tid til å gå inn på bruken av selenium i dette kurset, men her er en kode som bruker selenium til å skrape <a href="https://www.nordpoolgroup.com/Market-data1/Dayahead/Area-Prices/NO/Monthly/?view=table">nordpool.no</a>. De er ikke spesielt interessert i at vi gjør det, om du forsøker å skrape flere ganger kommer det opp en advarsel om at det er ulovlig, som altså ikke medfører riktighet.</p>
 <p><a href="https://github.com/espensirnes/notebooks/blob/main/res/scraping_nordpool.py">Her er imidlertid en kode som gjøre det mulig å skrape Nordpools nettsider med selenium</a></p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=d70bd637-20c3-4f48-922a-10855766e263"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Oppgave">Oppgave<a class="anchor-link" href="#Oppgave">&#182;</a></h1><p>Resultatet vises ved å lage en tabluatorseparert streng fordi filen ikke kan åpnes med pandas. Grunnen til det er at radene her her ulikt antall kolonner. Vi ser også at det trengs litt arbeid her for å organisere dataene bedre. Det kan du gjøre ved å redigere i funksjonene <code>html_to_table</code> og <code>format</code>.</p>
-
+<h1 id="Oppgave">Oppgave<a class="anchor-link" href="#Oppgave">¶</a></h1><p>Resultatet vises ved å lage en tabluatorseparert streng fordi filen ikke kan åpnes med pandas. Grunnen til det er at radene her her ulikt antall kolonner. Vi ser også at det trengs litt arbeid her for å organisere dataene bedre. Det kan du gjøre ved å redigere i funksjonene <code>html_to_table</code> og <code>format</code>.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=02923370"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="8%20-%20Git,%20IDE%27er%20og%20et%20lite%20spill.html">&lt; Forrige</a>     |     <a href="10%20-%20statsmodels.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="8%20-%20git%2C%20pythonfiler%20og%20IDE.html">&lt; Forrige</a>     |     <a href="10%20-%20statsmodels.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">¶</a></h5>
 </div>
 </div>
 </div>
-    </div>
-  </div>
+</div>
+</div>
+</main>
 </body>
-
-
-
-
-
-
-
 </html>

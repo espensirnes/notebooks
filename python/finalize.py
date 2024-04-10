@@ -81,10 +81,10 @@ def replace_all(fname,what, to):
 def replace(s,start_str,end_str,to,owerwrite=[False,False]):
     m0=re.search(start_str,s)
     if m0 is None:
-        raise RuntimeError(f'Failed to find {start_str}')    
+        raise ValueError(f'Failed to find {start_str}')    
     m1=re.search(end_str,s[m0.end():])
     if m1 is None:
-        raise RuntimeError(f'Failed to find {end_str}')
+        raise ValueError(f'Failed to find {end_str}')
     if owerwrite[0]:
         start=m0.start()
     else:
@@ -146,18 +146,21 @@ def insert_custom_html(html,content_list, elements_path):
     content=read(elements_path+'left_menu_top.html')
     left_menu=read(elements_path+'left_menu.html')
     html=replace(html, 
-                 'require.min.js"></script>\n',
-                 '\n<style type="text/css">', 
+                 '</script>',
+                 '<style type="text/css">', 
                  '<link rel="icon" type="image/x-icon" href="../img/favicon.ico">')        
     html=replace(html, ".container {",".row {", css,[True,False])
-    html=replace(html, "<body>",'<div tabindex="-1"', banner)
+    try:
+        html=replace(html, "<body>",'<div tabindex="-1"', banner)
+    except ValueError as e:
+        html=replace(html, "<body>",'<main>', banner)
 
     for text,link in content_list:
         content+=f'\t\t\t<a href="{link}">{text}</a><br>\n'
     content+=left_menu
     html=replace(html, 
                  '<div class="container" id="notebook-container">',
-                 '<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">', 
+                 '<div class="cell border-box-sizing text_cell rendered"', 
                  content)
 
     return html
