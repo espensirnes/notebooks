@@ -13461,8 +13461,8 @@ pip install numpy
 <div class="cell border-box-sizing text_cell rendered" id="cell-id=09c0827e-2ecd-4a9b-b484-41e49c095663"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Forh%C3%A5ndsdefinere-strategier">Forhåndsdefinere strategier<a class="anchor-link" href="#Forh%C3%A5ndsdefinere-strategier">¶</a></h2><p>Du kan legge inn en forhåndsdefinert strategi om du vil slippe å korrigere den i spillet hver gang. før <code>blotto.run()</code> kan du for eksempel bestemme deg for å satse alle troppene på fire av feltene.</p>
-<p>Om du nå limer inn strategien under i "run.py", før <code>blotto.run(6,100)</code>, og bytter ut sistnevnte med <code>blotto.run(6,100,player_strategy)</code>, vil dette bli din utgangsstrategi:</p>
+<h2 id="Forh%C3%A5ndsdefinere-strategier">Forhåndsdefinere strategier<a class="anchor-link" href="#Forh%C3%A5ndsdefinere-strategier">¶</a></h2><p>Du kan legge inn en forhåndsdefinert strategi om du vil slippe å korrigere den i spillet hver gang. før <code>blotto.Run()</code> kan du for eksempel bestemme deg for å satse alle troppene på fire av feltene.</p>
+<p>Om du nå limer inn strategien under i "run.py", før <code>blotto.Run(6,100)</code>, og bytter ut sistnevnte med <code>blotto.Run(6,100,player_strategy)</code>, vil dette bli din utgangsstrategi:</p>
 <h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">¶</a></h4>
 </div>
 </div>
@@ -13497,7 +13497,7 @@ pip install numpy
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Koden over må altså <em>limes inn</em> i "run.py".</p>
-<p>Legg merke til at vi importerer numpy øverst, siden denne brukes til å lage en strategi. Du byttet ut <code>blotto.run(6,100)</code> til <code>blotto.run(6,100,player_strategy)</code> fordi det tredje argumentet i blotto.run angir din utgangsstrategi strategi.</p>
+<p>Legg merke til at vi importerer numpy øverst, siden denne brukes til å lage en strategi. Du byttet ut <code>blotto.Run(6,100)</code> til <code>blotto.Run(6,100,player_strategy)</code> fordi det tredje argumentet i blotto.Run angir din utgangsstrategi strategi.</p>
 <p>Du kan forresten alltid sjekke hvilke argumenter en funksjon i har i VSCodev som en funksjon tar ved å holde ned Alt mens du har pekere over funksjonen.</p>
 <ul>
 <li>Start nå spillet på nytt, med den forhåndsdefinerte strategien.</li>
@@ -13547,7 +13547,7 @@ pip install numpy
 <div class="cell border-box-sizing text_cell rendered" id="cell-id=95042fec-5dfd-476c-841b-999611e249e6"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Lim koden inn i "run.py", og legg navnet på funksjonen inn som fjerde argument i<code>blotto.run</code>, slik at det blir <code>blotto.run(6,100,player_strategy, computer_strategy)</code></p>
+<p>Lim koden inn i "run.py", og legg navnet på funksjonen inn som fjerde argument i<code>blotto.Run</code>, slik at det blir <code>blotto.Run(6,100,player_strategy, computer_strategy)</code></p>
 <p>Om du ikke selv endrer på din forhåndsdefinerte strategi i spillet, vil du nå se at rollene er snudd om. Nå vinner PC'en  alltid de fire siste slagmarkene så vidt. Problemet er at PC'en nå vet hva du skal velge. Det kan hjelpe litt å gjøre valgene dine tilfeldige, slik at PC'en ikke kan vite hvilke valg du kommer til å ta. Du kan skape litt tilfeldighet ved å legge følgende inn i strategien over, før <code>assert</code>:</p>
 <pre><code>battalions=battalions[np.random.rand(n_fields).argsort()]
 </code></pre>
