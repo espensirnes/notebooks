@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<html lang="en">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>8 - Git, IDE'er og et lite spill</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><link rel="icon" type="image/x-icon" href="../img/favicon.ico"><style type="text/css">
   pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -23,6 +23,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #008400 } /* Generic.Inserted */
@@ -79,9 +80,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
-
-
-
 <style type="text/css">
 /*!
 *
@@ -13109,9 +13107,9 @@ div#notebook {
 }
 </style>
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
     init_mathjax = function() {
         if (window.MathJax) {
         // MathJax loaded
@@ -13130,18 +13128,18 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --></head>
+<!-- End of mathjax configuration --></head>
 <body>
 
 	<div id="header_wrap" class="topbanner">
@@ -13153,8 +13151,9 @@ div#notebook {
 	</div>
 	
 	
-<div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">	<div class="sidenav_container">
+<main>
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
 			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
@@ -13177,88 +13176,85 @@ div#notebook {
 			<a href="https://uit-sok-1005-v24.github.io/">SOK-1005 Datavitenskap for økonomer</a><br>
 			<a href="https://uit-sok-1006-v24.github.io/">SOK-1006 Mikroøkonomi</a><br>
 		</div>
-	</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+	</div><div class="cell border-box-sizing text_cell rendered" id="cell-id=e0ec92ec"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="7%20-%20l&#248;kker%20og%20simulering.html">&lt; Forrige</a>     |     <a href="9%20-%20webskraping%20med%20python.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="7%20-%20l%C3%B8kker%20og%20simulering.html">&lt; Forrige</a>     |     <a href="9%20-%20webskraping%20med%20python.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">¶</a></h5>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=063f5c3d-b593-420f-9bc3-afa09870d18b"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 8 - Git, IDE'er og et lite spill </span></p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=1381f253"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Git">Git<a class="anchor-link" href="#Git">&#182;</a></h1>
+<h1 id="Git">Git<a class="anchor-link" href="#Git">¶</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=10e03586"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://github.com/"><img align="right" src="../img/github.png" style="padding:20px;"></a>
+<p><a href="https://github.com/"><img align="right" alt="No description has been provided for this image" src="../img/github.png" style="padding:20px;"/></a>
 Vi har fra før lært hvordan vi kloner et git-repositorie og hvordan vi dytter endringer dit. Men den kanskje viktigste funksjonen til git er som verktøy for å samarbeide om og koordinere arbeid med kode. I denne forelesningen skal vi se litt nærmere på hvordan vi bruker git til dette.</p>
 <p>For å forstå dette, oppretter vi et enkelt test-repositorie med en tekstfil, som vi kan teste git på.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=15a8c186"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Opprett-et-nytt-repositorie-med-en-tekstfil">Opprett et nytt repositorie med en tekstfil<a class="anchor-link" href="#Opprett-et-nytt-repositorie-med-en-tekstfil">&#182;</a></h2><p>Start med å opprette et repositorie du kaller "git-test":</p>
+<h2 id="Opprett-et-nytt-repositorie-med-en-tekstfil">Opprett et nytt repositorie med en tekstfil<a class="anchor-link" href="#Opprett-et-nytt-repositorie-med-en-tekstfil">¶</a></h2><p>Start med å opprette et repositorie du kaller "git-test":</p>
 <ol>
 <li>gå til <a href="https://github.com/">https://github.com/</a> og logg eventuelt inn, om du ikke allerede er innlogget</li>
 <li>Trykk New</li>
 <li>Kall repositoriet "git-test"</li>
 </ol>
 <p>Du skal så klone dette repositoriet. Finn en egnet plassering, for eksempel ved å lage en ny mappe med navn "SOK-1005".</p>
-<ol>
+<ol start="3">
 <li>Åpne kommandovinduet</li>
-<li>Skriv inn <code>cd &lt;ønsket plassering&gt;</code>, for eksempel <code>cd SOK-1005</code>. </li>
+<li>Skriv inn <code>cd &lt;ønsket plassering&gt;</code>, for eksempel <code>cd SOK-1005</code>.</li>
 <li>Hent et <a href="https://github.com/settings/tokens">token</a> (husk å merke av for "repo"), eller bruk et du allerede har, og lim det inn i følgende kommando:</li>
 </ol>
-
-<pre><code>git clone https://&lt;token&gt;@github.com/&lt;brukernavn&gt;/git-test</code></pre>
-<p>(bytt ut \&lt;token&gt; og \&lt;brukernavn&gt; med ditt token og brukernavn)</p>
-<ol>
+<pre><code>git clone https://&lt;token&gt;@github.com/&lt;brukernavn&gt;/git-test
+</code></pre>
+<p>(bytt ut &lt;token&gt; og &lt;brukernavn&gt; med ditt token og brukernavn)</p>
+<ol start="6">
 <li><p>Opprett en ny tekstfil i den nye mappen "git-test". I windows og <code>jupyter.uit.no</code> gjør du det ved å høyreklikke i mappen.</p>
 </li>
 <li><p>Åpne tekstfilen og kopier inn følgende linjer med tekst:</p>
 </li>
 </ol>
-
 <pre><code>To be, or not to be, that is the question:
 Whether 'tis nobler in the mind to suffer
 The slings and arrows of outrageous fortune,
 Or to take Arms against a Sea of troubles,
-And by opposing end them?</code></pre>
-<ol>
+And by opposing end them? 
+</code></pre>
+<ol start="8">
 <li>Dytt endringene til git-hub ved å skrive (HUSK bruk <code>cd</code> + mappenavn for å navigere deg inn i <code>git-test</code>):</li>
 </ol>
-
 <pre><code>git add .
 git commit -m "added Shakespeare"
-git push</code></pre>
+git push
+</code></pre>
 <p>Blir du bedt om brukernavn/passord, generer du et  og bruker det som passord.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=14ea777c"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Konflikt">Konflikt<a class="anchor-link" href="#Konflikt">&#182;</a></h2>
+<h2 id="Konflikt">Konflikt<a class="anchor-link" href="#Konflikt">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=ed52a5c1"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Til nå har vi forutsatt at bare én person arbeider med samme repositorie. Hele poenget med git er imidlertid samarbeid, og da oppstår det ofte "konflikt". Vi snakker ikke da om bitter uenighet, men at to personer gjør endringer i samme repositorie på en måte som git ikke klarer å ordne opp i.</p>
@@ -13267,23 +13263,21 @@ git push</code></pre>
 <ol>
 <li>Gå til repositoriet på github og endre " 'tis" i teksten til "it is"</li>
 <li>Gå til tekstfilen lokalt, og endre samme del av teksten til "this", og lukk tekstfilen.</li>
-<li>Forplikt den lokale endringen i kommandovinduet med 
-<pre><code>git add .
-git commit -m "Improved Shakespeare"</code></pre>
-</li>
+<li>Forplikt den lokale endringen i kommandovinduet med</li>
 </ol>
-
+<pre><code>git add .
+git commit -m "Improved Shakespeare"
+</code></pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=f2c2de7f"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Konfliktl%C3%B8sning">Konfliktl&#248;sning<a class="anchor-link" href="#Konfliktl%C3%B8sning">&#182;</a></h2><p>Du har nå skapt en konflikt med deg selv. For å løse konflikten må du kjøre</p>
-
-<pre><code>git pull</code></pre>
+<h2 id="Konfliktl%C3%B8sning">Konfliktløsning<a class="anchor-link" href="#Konfliktl%C3%B8sning">¶</a></h2><p>Du har nå skapt en konflikt med deg selv. For å løse konflikten må du kjøre</p>
+<pre><code>git pull
+</code></pre>
 <p>Du skal da få en melding om at det er en konflikt du må løse. Åpne tekstfilen lokalt på nytt. Du vil da se at den er endret til noe slikt som dette:</p>
-
 <pre><code>To be, or not to be, that is the question:
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 Whether this nobler in the mind to suffer
@@ -13292,28 +13286,28 @@ Whether 'it is nobler in the mind to suffer
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 2de43c361c099727ae6f3cabce81a2fb87fe3e48
 The slings and arrows of outrageous fortune,
 Or to take Arms against a Sea of troubles,
-And by opposing end them?</code></pre>
+And by opposing end them? 
+</code></pre>
 <p>Partitet mellom <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> og <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2de43c361c099727ae6f3cabce81a2fb87fe3e48</code> er der konflikten befinner seg. Bytt ut teksten med</p>
-
 <pre><code>To be, or not to be, that is the question:
 Whether it is nobler in the mind to suffer        #" 'tis" means "it is" NOT "this", can I read?
 The slings and arrows of outrageous fortune,
 Or to take Arms against a Sea of troubles,
-And by opposing end them?</code></pre>
+And by opposing end them? 
+</code></pre>
 <p>forplikt og dytt endringene til github:</p>
-
 <pre><code>git add .
 git commit -m "Modernized Shakespeare"
-git push</code></pre>
+git push
+</code></pre>
 <p>Du har nå løst konflikten.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=5005063a-9012-43ce-9feb-c8da9d615045"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="N%C3%A5r-konflikten-er-for-stor-og-omfattende-til-%C3%A5-redigere-i-teksten">N&#229;r konflikten er for stor og omfattende til &#229; redigere i teksten<a class="anchor-link" href="#N%C3%A5r-konflikten-er-for-stor-og-omfattende-til-%C3%A5-redigere-i-teksten">&#182;</a></h2><p>Av og til vil det være upraktisk å redigere i teksten, dersom endringene er for store og omfattende, eller dersom endringene for eksempel er i en jupyter-fil.</p>
+<h2 id="N%C3%A5r-konflikten-er-for-stor-og-omfattende-til-%C3%A5-redigere-i-teksten">Når konflikten er for stor og omfattende til å redigere i teksten<a class="anchor-link" href="#N%C3%A5r-konflikten-er-for-stor-og-omfattende-til-%C3%A5-redigere-i-teksten">¶</a></h2><p>Av og til vil det være upraktisk å redigere i teksten, dersom endringene er for store og omfattende, eller dersom endringene for eksempel er i en jupyter-fil.</p>
 <p>Git er laget for å samarbeide om kode, som er lagret i vanlige tekstfiler. Formatet til *.ipynb-filene som jupyter lager er også kode, men vi ser den ikke når vi åpner dokumentet i jupyter. Når git setter inn tekst i jupyter-filer, slik som over, vil den blir ubrukelig.</p>
 <p>Den enkleste måten å løse slike situasjoner på, er å avbryte konfliktløsningen, omdøpe det lokale repositoriet og klone det originale fjernrepositoriet på på nytt. Det er ikke helt "etter boken", men å håndtere mer avanserte konflikter er det ikke plass til i dette kurset.</p>
 <p>Om du har klonet repositoriet på nytt kan du åpne filen i repoen på nett og lokalt samtidig, og sammenligne. Du kan så endre filen i det klonede repositoriet, eller bytte ut filen i fjernrepositoriet med den nyere lokale filen. Dette gjør du på følgende måte:</p>
@@ -13329,52 +13323,50 @@ git push</code></pre>
 <li><p>Forplikt og dytt til github:</p>
 </li>
 </ol>
-
 <pre><code>git add .
 git commit -m "Fixed Shakespeare"
-git push</code></pre>
+git push
+</code></pre>
 <p>Generelt er det langt mer nøyaktig og sikrere å bruke gits konfliktløsningsmetode enn å selv sammenligne versjoner, men dersom du vet helt sikkert at din lokale versjon er den riktige, eller at det er opplagt hvilke endringer som skal gjøres, kan du bruke metoden over.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=0b909102"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Arbeidsflyt-i-git">Arbeidsflyt i git<a class="anchor-link" href="#Arbeidsflyt-i-git">&#182;</a></h2>
+<h2 id="Arbeidsflyt-i-git">Arbeidsflyt i git<a class="anchor-link" href="#Arbeidsflyt-i-git">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=d9812bf1"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Følgende arbeidsflyt anbefales for git:</p>
 <ol>
 <li>Kjør følgende kommandoer ofte:</li>
 </ol>
-
 <pre><code>git add .
 git commit -m "Update"
-git pull</code></pre>
+git pull
+</code></pre>
 <p>Da vil din kode hele tiden være oppdatert mot originalkoden på serveren. Dersom du oppdager konflikter, kan du håndtere dem selv eller ta opp konflikten med de andre på prosjektet. Generelt er det en god idé at flere ikke jobber med samme fil samtidig.</p>
-<ol>
+<ol start="2">
 <li><p>Du får beskjed når det skjer en konflikten etter å ha kjørt <code>git pull</code>. Søk da etter "&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD" i teksten for å finne hvor konfliktene ligger, og rediger bort git-taggene som vist i eksemplet over.</p>
 </li>
 <li><p>Kjør alltid kommandoene i 1. før du dytter til orginalen på serveren (<code>git push</code>)</p>
 </li>
 </ol>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=f8b516b4"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dersom-innloggingen-ikke-fungerer">Dersom innloggingen ikke fungerer<a class="anchor-link" href="#Dersom-innloggingen-ikke-fungerer">&#182;</a></h3>
+<h3 id="Dersom-innloggingen-ikke-fungerer">Dersom innloggingen ikke fungerer<a class="anchor-link" href="#Dersom-innloggingen-ikke-fungerer">¶</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=696bb372"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>En vanlig feil er at innloggingstedaljene som er lagret på maskinen din er utdaterte og feil. Når du bruker git vil ofte innloggingsdetaljene lagres på maskinen. Du kan løse problemet ved å slette detaljene</p>
@@ -13384,21 +13376,20 @@ git pull</code></pre>
 </ul>
 <p>Om du må skrive inn passord hver gang du pusher til github, så kan du åpne filen som heter "config" under mappen ".git" i repositoriet lokalt. Du kan åpne den med "notepad" (eller installer <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>). Her kan du sette inn tokenet etterfulgt av "@" før "github.com" i nettadressen. Altså, om tokenet er "abddefg", brukernavnet er "bruker" og repositoriet heter "mitt_repo", skal adressen i config-filen se slik ut: "<a href="https://abddefg@github.com/bruker/mitt_repo">https://abddefg@github.com/bruker/mitt_repo</a>"</p>
 <p>Du må muligens endre på visningsalternativene i "Windows File Explorer" til å vise skjulte filer og mapper, for å kunne se "config"-filen.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=fca589ad"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="IDE'er">IDE'er<a class="anchor-link" href="#IDE'er">&#182;</a></h1>
+<h1 id="IDE'er">IDE'er<a class="anchor-link" href="#IDE'er">¶</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=76762f5d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://code.visualstudio.com/download"><img align="right" src="../img/vs_code.jpg" style="padding:20px;"></a></p>
+<p><a href="https://code.visualstudio.com/download"><img align="right" alt="No description has been provided for this image" src="../img/vs_code.jpg" style="padding:20px;"/></a></p>
 <p>Integrated Development Environment (IDE) er et program som hjelper deg å programmere. I motsetning til jupyter, brukes IDE'er til å redigere tekstfiler.</p>
 <p>Jupyter er fint til å redigere korte programsnutter og å hente inn og kjøre ferdigprogrammerte pakker og moduler. Men skal du skrive kode på mer en femten linjer, bør du skrive dem i en tekstfil.</p>
 <p>En av de mest brukte IDE'ene er  Visual Studio Code, som støtter en lang rekke programmeringsspråk, inkludert python.</p>
@@ -13406,91 +13397,82 @@ git pull</code></pre>
 <li><a href="https://code.visualstudio.com/download">Her kan du laste ned Visual Studio Code</a> for både Mac og Windows.</li>
 </ul>
 <p>Før du kan bruke VSCode med python, må du sørge for at python er installert. <a href="https://www.python.org/downloads/">Last det ned her</a>. Dersom du har Windows, så vær sikker på at du installerer for alle brukere (krever adminrettigheter) og at du haker av for at python skal legges til i PATH.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=a8c0697c-236a-4834-8cc6-16909f9bcecd"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Blotto">Blotto<a class="anchor-link" href="#Blotto">&#182;</a></h2>
+<h2 id="Blotto">Blotto<a class="anchor-link" href="#Blotto">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=a7d4c3c0-9fbe-423c-9331-6a6fd166b71d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Blotto er et spill der Oberst Blotto (du) skal disponere styrker over et gitt antall slagmarker. Spillet er sentralt innenfor økonomifaget og det som kalles <em>spillteori</em>. Vi kommer tilbake til noen interessante egenskaper med spillet senere, men la oss først spillet det.</p>
 <p>Du laster ned spillet ved å klone det fra github. Du bruker da følgende kommando:</p>
-
-<pre><code>git clone https://github.com/espensirnes/blotto</code></pre>
-<p><a href="https://github.com/espensirnes/blotto"><img align="right" src="../img/blotto.png" style="padding:20px;"></a></p>
+<pre><code>git clone https://github.com/espensirnes/blotto
+</code></pre>
+<p><a href="https://github.com/espensirnes/blotto"><img align="right" alt="No description has been provided for this image" src="../img/blotto.png" style="padding:20px;"/></a></p>
 <p>Pass på at du er i ønsket mappe i kommandovinduet før du kloner. <a href="0%20-%20installasjon%20og%20tips.html">Les mer her</a> om hvordan du navigerer i filsystemet i kommandovinduet. Naviger for eksempel til sok-1005-mappen du skapte over.</p>
 <p>Du kan nå åpne spillet i VSCode. Om du har VSCode åpen, så går du på "File" og velger "Open Folder". Du kan så velge blotto-mappen du nettopp klonet.</p>
 <p>Windows: For å lokalisere mappen du nettopp skapte i Windows, se hvilken bokstav stien begynner med, og se under "min Datamaskin"/"My Computer" for å gjenfinne rett stasjon.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=379b2596-2ef8-473b-9b0b-b1139fff3f4e"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lag-en-python-fil">Lag en python-fil<a class="anchor-link" href="#Lag-en-python-fil">&#182;</a></h2>
+<h2 id="Lag-en-python-fil">Lag en python-fil<a class="anchor-link" href="#Lag-en-python-fil">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=cb49ba23-1d1d-4ab0-a266-babb92e03b16"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Om du nå har åpen VSCode i blotto-mappen, velger du "File"-&gt;"New File" og så "File"-&gt;"Save As..." , og lagerer den nye filen som "run.py".</p>
 <p>"run.py" er nå en python-fil, som du kan kjøre pythonkode i. Skriv for eksempel <code>print("Hello World")</code> i filen og trykk ctrl+s for å lagre.</p>
 <p>Før du kan kjøre koden i VSCode, må du konfigurere "debugging" (feilsøking).</p>
 <ol>
-<li>Trykk på <img src="../img/VSCode_debug.png" alt="run debug">-knappen </li>
+<li>Trykk på <img alt="run debug" src="../img/VSCode_debug.png">-knappen</img></li>
 <li>Under "Run and Debug", trykk på "create a launch.json file"</li>
-<li>På spørsmål om hvilken utvidelse (extension) som skal brukes, trykk på "install" under "Python intelliSense" fra Microsoft. </li>
-<li>Velg fanen "run.py" for å komme til bake til fila di. </li>
+<li>På spørsmål om hvilken utvidelse (extension) som skal brukes, trykk på "install" under "Python intelliSense" fra Microsoft.</li>
+<li>Velg fanen "run.py" for å komme til bake til fila di.</li>
 <li>Velg "Run and Debug"</li>
 </ol>
-<p>Du kan nå trykke på <img src="../img/run_vscode.png" alt="run debug">-knappen oppe til venstre hver når du skal kjøre koden.</p>
+<p>Du kan nå trykke på <img alt="run debug" src="../img/run_vscode.png">-knappen oppe til venstre hver når du skal kjøre koden.</img></p>
 <p>For å kjøre spillet skriver du inn:</p>
-
 <pre><code>import blotto
-blotto.Run(6,100)</code></pre>
+blotto.Run(6,100)
+</code></pre>
 <p>Du vil med stor sannsynlighet få en <code>ModuleNotFoundError</code> når du forsøker å laste <code>blotto</code>. Det skyldes i så fall at du ikke har installert alle pakkene du trenger. Om du har installert python riktig, for alle brukere, så kan du installere det du trenger med følgende kommandoer i kommandovinduet:</p>
-
 <pre><code>pip install tk
 pip install Pillow
-pip install numpy</code></pre>
+pip install numpy
+</code></pre>
 <ul>
 <li>Mac-brukere: skriv <code>pip3</code> i stedet for <code>pip</code></li>
 <li>Windowsbrukere: pass på at du har åpnet kommandovinduet med adminrettigheter</li>
 </ul>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=09c0827e-2ecd-4a9b-b484-41e49c095663"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<<<<<<< HEAD
 <h2 id="Forh%C3%A5ndsdefinere-strategier">Forhåndsdefinere strategier<a class="anchor-link" href="#Forh%C3%A5ndsdefinere-strategier">¶</a></h2><p>Du kan legge inn en forhåndsdefinert strategi om du vil slippe å korrigere den i spillet hver gang. før <code>blotto.Run()</code> kan du for eksempel bestemme deg for å satse alle troppene på fire av feltene.</p>
 <p>Om du nå limer inn strategien under i "run.py", før <code>blotto.Run(6,100)</code>, og bytter ut sistnevnte med <code>blotto.Run(6,100,player_strategy)</code>, vil dette bli din utgangsstrategi:</p>
 <h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">¶</a></h4>
-=======
-<h2 id="Forh%C3%A5ndsdefinere-strategier">Forh&#229;ndsdefinere strategier<a class="anchor-link" href="#Forh%C3%A5ndsdefinere-strategier">&#182;</a></h2><p>Du kan legge inn en forhåndsdefinert strategi om du vil slippe å korrigere den i spillet hver gang. før <code>blotto.run()</code> kan du for eksempel bestemme deg for å satse alle troppene på fire av feltene.</p>
-<p>Om du nå limer inn strategien under i "run.py", før <code>blotto.run(6,100)</code>, og bytter ut sistnevnte med <code>blotto.run(6,100,player_strategy)</code>, vil dette bli din utgangsstrategi:</p>
-<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
->>>>>>> 282f55b7032f02a22b6b3033e92ae826df8021e1
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=537e1af4-3bdb-49c3-9abd-41ccd0b85159">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">player_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">):</span>
     <span class="c1">#defining the array:</span>
@@ -13507,47 +13489,44 @@ pip install numpy</code></pre>
     
     <span class="k">return</span> <span class="n">battalions</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=d44bba52-d708-4226-81a8-2a384931dab4"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Koden over må altså <em>limes inn</em> i "run.py".</p>
 <p>Legg merke til at vi importerer numpy øverst, siden denne brukes til å lage en strategi. Du byttet ut <code>blotto.Run(6,100)</code> til <code>blotto.Run(6,100,player_strategy)</code> fordi det tredje argumentet i blotto.Run angir din utgangsstrategi strategi.</p>
 <p>Du kan forresten alltid sjekke hvilke argumenter en funksjon i har i VSCodev som en funksjon tar ved å holde ned Alt mens du har pekere over funksjonen.</p>
 <ul>
-<li>Start nå spillet på nytt, med den forhåndsdefinerte strategien. </li>
+<li>Start nå spillet på nytt, med den forhåndsdefinerte strategien.</li>
 </ul>
 <p>Du kan endre koden over, og legge inn hvilken som helst strategi. I dette tilfellet er en startegi en funksjon som tar antall battaljoner og slagmarker som argumenter, og returnerer en liste over hvor battaljonene skal plasseres.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=7731b6e6-dc00-4e58-a360-372494d402d3"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="PC'ens-strategier">PC'ens strategier<a class="anchor-link" href="#PC'ens-strategier">&#182;</a></h2>
+<h2 id="PC'ens-strategier">PC'ens strategier<a class="anchor-link" href="#PC'ens-strategier">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=05ae505b-eafa-4657-aef1-4246e564ebc3"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>PC'en sin strategi i dette spillet er foreløpig ikke veldig smart. Strategien over vil nesten alltid slå PC'en, så la oss hjelpe PC'en med en litt smartere strategi:</p>
-<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
+<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=5367e685-14d7-4da7-9b1a-e1d78d87e8b2">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">computer_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">):</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">computer_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">):</span>
     <span class="n">battalions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
     
     <span class="c1">#Will at present only work witih 100 battalions</span>
@@ -13561,45 +13540,42 @@ pip install numpy</code></pre>
     <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">battalions</span><span class="p">)</span><span class="o">==</span><span class="n">n_battalions</span>
     <span class="k">return</span> <span class="n">battalions</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=95042fec-5dfd-476c-841b-999611e249e6"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Lim koden inn i "run.py", og legg navnet på funksjonen inn som fjerde argument i<code>blotto.Run</code>, slik at det blir <code>blotto.Run(6,100,player_strategy, computer_strategy)</code></p>
 <p>Om du ikke selv endrer på din forhåndsdefinerte strategi i spillet, vil du nå se at rollene er snudd om. Nå vinner PC'en  alltid de fire siste slagmarkene så vidt. Problemet er at PC'en nå vet hva du skal velge. Det kan hjelpe litt å gjøre valgene dine tilfeldige, slik at PC'en ikke kan vite hvilke valg du kommer til å ta. Du kan skape litt tilfeldighet ved å legge følgende inn i strategien over, før <code>assert</code>:</p>
-
-<pre><code>battalions=battalions[np.random.rand(n_fields).argsort()]</code></pre>
+<pre><code>battalions=battalions[np.random.rand(n_fields).argsort()]
+</code></pre>
 <p>Denne koden sørge for at plasseringen av battaljonene blir tilfeldig. Du vil nå tape ofte, men ikke alltid.</p>
-
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=ffc77cfa"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Testing-av-strategier">Testing av strategier<a class="anchor-link" href="#Testing-av-strategier">&#182;</a></h2>
+<h2 id="Testing-av-strategier">Testing av strategier<a class="anchor-link" href="#Testing-av-strategier">¶</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=e4b15b8d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Det er upraktisk og veldig ineffektivt å kjøre <code>blotto.run</code> for å teste strategier. Det er enkelt å lage en funksjon som gir en poengsum for hvor god en strategi er mot en annen. Følgende funksjon returnerer en poengsum på -1 (tap), 0 (uavgjort) eller 1 (seier):</p>
-<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=6cf14280">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">call_battle</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span> <span class="n">n_battalions</span><span class="p">,</span> <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">):</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">call_battle</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span> <span class="n">n_battalions</span><span class="p">,</span> <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">):</span>
     <span class="n">c_battlions</span><span class="o">=</span><span class="n">computer_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">)</span>
     <span class="n">p_battlions</span><span class="o">=</span><span class="n">player_strategy</span><span class="p">(</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">n_fields</span><span class="p">)</span>
     
@@ -13610,44 +13586,35 @@ pip install numpy</code></pre>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">call_battle</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">))</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-1
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=d02bf885"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Å sjekke bare ett spill kan vi imidlertid ikke dra noen konklusjon av. Følgende kode kjører <code>call_battle</code> 100 000 ganger, og returner et score fra -1 (alltid tap) til 1 (alltid seier):</p>
-<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=46e95750">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_strategies</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">):</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_strategies</span><span class="p">(</span><span class="n">n_fields</span><span class="p">,</span><span class="n">n_battalions</span><span class="p">,</span><span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">):</span>
     <span class="n">n_tests</span><span class="o">=</span><span class="mi">100000</span>
     <span class="n">r</span><span class="o">=</span><span class="mi">0</span>
     <span class="n">record</span><span class="o">=</span><span class="p">[]</span>
@@ -13660,86 +13627,73 @@ pip install numpy</code></pre>
 
 <span class="n">test_strategies</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">player_strategy</span><span class="p">,</span> <span class="n">computer_strategy</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>-0.79813</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=c52588da"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Du kan nå gjøre endringer i både <code>player_strategy</code> og <code>computer_strategy</code> for å finne best mulig strategi, som fungerer mot flest mulig andre strategier!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=dc91c118"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bruk-funksjonaliteten-i-IDE'en">Bruk funksjonaliteten i IDE'en<a class="anchor-link" href="#Bruk-funksjonaliteten-i-IDE'en">¶</a></h2><img align="right" alt="No description has been provided for this image" src="../img/stop_point.png"/>
+Når du skal forsøke å lage best mulig strategi, kan det være lurt å benytte seg av mulighetene som ligger i IDE'en. Den store fordelen med en IDE er at du kan stoppe koden, og undersøke variabler under veis. Trykker du i margen til venstre, vil det komme et rødt punkt som indikerer et stoppunkt. 
+
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=fdab637d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Bruk-funksjonaliteten-i-IDE'en">Bruk funksjonaliteten i IDE'en<a class="anchor-link" href="#Bruk-funksjonaliteten-i-IDE'en">&#182;</a></h2><p><img src=img/stop_point.png align='right'>
-Når du skal forsøke å lage best mulig strategi, kan det være lurt å benytte seg av mulighetene som ligger i IDE'en. Den store fordelen med en IDE er at du kan stoppe koden, og undersøke variabler under veis. Trykker du i margen til venstre, vil det komme et rødt punkt som indikerer et stoppunkt.</p>
-
+<h1 id="Oppgaver:">Oppgaver:<a class="anchor-link" href="#Oppgaver:">¶</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=fea89e2b"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Oppgaver:">Oppgaver:<a class="anchor-link" href="#Oppgaver:">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>3) Gå sammen to eller flere og gjør følgende:
-    a) Lag et repositorie 'blottokopi' på github som deles med alle
-    b) Klon repositoriet og kopier innholdet i blottorepositoriet til 'blottokopi'
-    c) Nå kan dere løse oppgavene under på hver deres PC, men arbeide på samme dokument
-    d) Forsøk å lage og løse konflikter, for å se hvordan det fungerer</p>
-<p>1) Forsøk å endre på funksjonen <code>player_strategy</code> slik at den blir best mulig (gjør gjerne endringer i <code>computer_strategy</code> også for å gi den best mulig konkurranse), og lagre strategien/funksjonen i en fil du kaller "strategy.py" i sok-1005-repositoriet. Koden vil bli kjørt mot den beste strategien til foreleser 100 000 ganger og får en score mellom -1 (alltid tap) og 1 (alltid seier). Du vil få vite hvordan du er rangert.</p>
+<ol start="3">
+<li><p>Gå sammen to eller flere og gjør følgende:
+a) Lag et repositorie 'blottokopi' på github som deles med alle
+b) Klon repositoriet og kopier innholdet i blottorepositoriet til 'blottokopi'
+c) Nå kan dere løse oppgavene under på hver deres PC, men arbeide på samme dokument
+d) Forsøk å lage og løse konflikter, for å se hvordan det fungerer</p>
+</li>
+<li><p>Forsøk å endre på funksjonen <code>player_strategy</code> slik at den blir best mulig (gjør gjerne endringer i <code>computer_strategy</code> også for å gi den best mulig konkurranse), og lagre strategien/funksjonen i en fil du kaller "strategy.py" i sok-1005-repositoriet. Koden vil bli kjørt mot den beste strategien til foreleser 100 000 ganger og får en score mellom -1 (alltid tap) og 1 (alltid seier). Du vil få vite hvordan du er rangert.</p>
+</li>
+</ol>
 <p>Det må være gjort større endringer i funksjonen enn bare å endre på antall bataljoner i <code>player_strategy</code>, for å få godkjent.</p>
-<p>2) Endre <code>computer_strategy</code> og <code>player_strategy</code> slik at du faktisk kan angi vilkårlig hvilket antall battalioner og slagmarker du skal ha (nå vil du få en <code>assert error</code> om du oppgir noe annet enn hhv. 100 og 6.</p>
-
+<ol start="2">
+<li>Endre <code>computer_strategy</code> og <code>player_strategy</code> slik at du faktisk kan angi vilkårlig hvilket antall battalioner og slagmarker du skal ha (nå vil du få en <code>assert error</code> om du oppgir noe annet enn hhv. 100 og 6.</li>
+</ol>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=42efbb1d"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="7%20-%20l&#248;kker%20og%20simulering.html">&lt; Forrige</a>     |     <a href="9%20-%20webskraping%20med%20python.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="7%20-%20l%C3%B8kker%20og%20simulering.html">&lt; Forrige</a>     |     <a href="9%20-%20webskraping%20med%20python.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">¶</a></h5>
 </div>
 </div>
 </div>
-    </div>
-  </div>
+</div>
+</div>
+</main>
 </body>
-
-
-
-
- 
-
-
 </html>
