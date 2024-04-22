@@ -1,8 +1,8 @@
 <!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html lang="en">
-<head><meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>0 - installasjon og tips</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><link rel="icon" type="image/x-icon" href="../img/favicon.ico"><style type="text/css">
   pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -23,7 +23,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 .highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #008400 } /* Generic.Inserted */
@@ -80,6 +79,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
+
+
+
 <style type="text/css">
 /*!
 *
@@ -13107,9 +13109,9 @@ div#notebook {
 }
 </style>
 <!-- Load mathjax -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
     init_mathjax = function() {
         if (window.MathJax) {
         // MathJax loaded
@@ -13128,18 +13130,18 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: {
-                    automatic: true
+                    linebreaks: { 
+                    automatic: true 
                     }
                 }
             });
-
+        
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
     init_mathjax();
     </script>
-<!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration --></head>
 <body>
 
 	<div id="header_wrap" class="topbanner">
@@ -13151,9 +13153,8 @@ div#notebook {
 	</div>
 	
 	
-<main>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">	<div class="sidenav_container">
+<div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
 			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
@@ -13176,48 +13177,50 @@ div#notebook {
 			<a href="https://uit-sok-1005-v24.github.io/">SOK-1005 Datavitenskap for økonomer</a><br>
 			<a href="https://uit-sok-1006-v24.github.io/">SOK-1006 Mikroøkonomi</a><br>
 		</div>
-	</div><div class="cell border-box-sizing text_cell rendered" id="cell-id=541033d4-f85d-40b0-a42d-ecbe31a20105"><div class="prompt input_prompt">
+	</div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3CForrige----%7C-----Neste-%3E"><span style="color:lightgrey">&lt;Forrige </span>   |     <a href="1%20-%20introduksjon.html">Neste &gt;</a><a class="anchor-link" href="#%3CForrige----%7C-----Neste-%3E">¶</a></h5>
+<h5><span style="color:lightgrey">\<Forrige </span>   |     <a href="1%20-%20introduksjon.html">Neste &gt;</a></h5>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=074ebde0-2d56-4157-83a4-9d57f74a6fa8"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 0 - installasjon og tips </span></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=95e8e826-78e1-4335-bb5e-91c522514c68"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installasjon-av--Python,-git-og-Jupyter">Installasjon av  Python, git og Jupyter<a class="anchor-link" href="#Installasjon-av--Python,-git-og-Jupyter">¶</a></h1>
+<h1 id="Installasjon-av--Python,-git-og-Jupyter">Installasjon av  Python, git og Jupyter<a class="anchor-link" href="#Installasjon-av--Python,-git-og-Jupyter">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=a771bb6c-f173-4fcc-8615-d8899847fb5a"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://www.python.org/downloads/"><img align="right" alt="No description has been provided for this image" src="../img/python-logo2.png" style="padding:20px;"/></a></p>
-<h2 id="1.-Installere-python">1. Installere python<a class="anchor-link" href="#1.-Installere-python">¶</a></h2><p><strong>Windows:</strong></p>
+<p><a href="https://www.python.org/downloads/"><img align="right" src="../img/python-logo2.png" style="padding:20px;"></a></p>
+<h2 id="1.-Installere-python">1. Installere python<a class="anchor-link" href="#1.-Installere-python">&#182;</a></h2><p><strong>Windows:</strong></p>
 <p>På noen systemer er det tilstrekkelig at du skriver <code>python</code> kommandovinduet. Om ikke det fungerer, gjør slik:</p>
 <ol>
 <li>Gå til <a href="https://www.python.org/downloads/">installasjonssiden</a> og last ned</li>
-<li>Installer for alle brukere (krever elevering/admin login) og <strong>hak av for å legge til "PATH"</strong>.</li>
+<li>Installer for alle brukere (krever elevering/admin login) og <strong>hak av for å legge til "PATH"</strong>. </li>
 </ol>
 <p>(Jeg har endret litt på "oppskriften" etter at videoen ble spilt inn)</p>
 <p><strong>Mac:</strong></p>
 <p>Gå til <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
-<h2 id="2.-Installere-git">2. Installere git<a class="anchor-link" href="#2.-Installere-git">¶</a></h2><p><strong>Windows:</strong></p>
+<h2 id="2.-Installere-git">2. Installere git<a class="anchor-link" href="#2.-Installere-git">&#182;</a></h2><p><strong>Windows:</strong></p>
 <ol>
 <li>Gå til <a href="https://git-scm.com/downloads">installasjonsiden for git</a>{:target="blank"}</li>
 <li>Last ned for windows og installer for alle brukere (krever elevering/admin login)</li>
 </ol>
 <p><strong>Mac:</strong></p>
 <p>Åpne Terminal-appen og skriv <code>git</code>. Du blir spurt om du vil installere utviklerverktøy. Takk ja, og installer.</p>
-<h2 id="3.-Hente-kursmateriell-fra-Github">3. Hente kursmateriell fra Github<a class="anchor-link" href="#3.-Hente-kursmateriell-fra-Github">¶</a></h2><p>For å hente filene til Jupyter  åpner du kommanovinduet på nytt, men denne gangen UTEN Å HØYREKLIKKET, siden du nå skal arbeidet på ditt hjemmeområde. Videre gjør du slik:</p>
+<h2 id="3.-Hente-kursmateriell-fra-Github">3. Hente kursmateriell fra Github<a class="anchor-link" href="#3.-Hente-kursmateriell-fra-Github">&#182;</a></h2><p>For å hente filene til Jupyter  åpner du kommanovinduet på nytt, men denne gangen UTEN Å HØYREKLIKKET, siden du nå skal arbeidet på ditt hjemmeområde. Videre gjør du slik:</p>
 <ol>
 <li><p>Naviger til dit du ønsker å ha kursmappen din. Om du for eksempel har en mappe <code>Documents</code> på maskinen din, og du vil ha kursmappen under den, så skriver du
 <code>cd Documents</code></p>
@@ -13226,38 +13229,42 @@ div#notebook {
 </li>
 </ol>
 <p><code>mkdir sok-1003</code></p>
-<ol start="3">
-<li>Gå så inn i den mappen du har laget ved å skrive</li>
+<ol>
+<li>Gå så inn i den mappen du har laget ved å skrive </li>
 </ol>
-<p><code>cd sok-1003</code>
-4. Last ned kursmateriellet ved å kopiere inn følgende kommando i kommandovinduet:</p>
-<p><code>git clone https://github.com/espensirnes/notebooks/</code><br/>
+<p><code>cd sok-1003</code></p>
+<ol>
+<li>Last ned kursmateriellet ved å kopiere inn følgende kommando i kommandovinduet: </li>
+</ol>
+<p><code>git clone https://github.com/espensirnes/notebooks/</code><br>
 <a href="https://github.com/espensirnes/notebooks/">https://github.com/espensirnes/notebooks/</a></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=d27f40a3-9b39-4513-805c-1819b6d6d58d"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4.-Kj%C3%B8re-Jupyter">4. Kjøre Jupyter<a class="anchor-link" href="#4.-Kj%C3%B8re-Jupyter">¶</a></h1><p><strong>Installere Jupyter lab:</strong></p>
+<h1 id="4.-Kj%C3%B8re-Jupyter">4. Kj&#248;re Jupyter<a class="anchor-link" href="#4.-Kj%C3%B8re-Jupyter">&#182;</a></h1><p><strong>Installere Jupyter lab:</strong></p>
 <ol>
-<li>åpne kommandovinduet: Åpne finder og skriv "terminal" i søkefeltet og åne terminal.</li>
-<li>Skriv inn<br/><code>sudo -H pip3 install jupyterlab</code><br/>("sodu -H" gjør at det installeres som admin, slik at "jupyter lab" blir en global kommando som du kan starte jupyter med)</li>
+<li>åpne kommandovinduet: Åpne finder og skriv "terminal" i søkefeltet og åne terminal. </li>
+<li>Skriv inn<br><code>sudo -H pip3 install jupyterlab</code><br>("sodu -H" gjør at det installeres som admin, slik at "jupyter lab" blir en global kommando som du kan starte jupyter med)</li>
 <li>Skriv inn passord</li>
 </ol>
 <p><strong>Starte Jupyter lab:</strong></p>
 <p>Skriv <code>jupyter lab</code> i terminalen</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=64f73db0-7a43-4e5f-a2c0-8feda191211f"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installere-Python-pakker">Installere Python-pakker<a class="anchor-link" href="#Installere-Python-pakker">¶</a></h1>
+<h1 id="Installere-Python-pakker">Installere Python-pakker<a class="anchor-link" href="#Installere-Python-pakker">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=0ae4c045-a0b1-4966-8136-81ce0b49c930"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Om du har installert Python riktig for alle brukere med admnistratorrettighete, er det utrolig enkelt å installere "pakker" for python. En pakke er et pythonprogram som du kan importere til Python. Om du for eksempel skal installere pakken <code>numpy</code>, en matematikkpakke, så skriver du på windows:</p>
@@ -13265,109 +13272,119 @@ div#notebook {
 <p>På mac må du normalt skrive</p>
 <p><code>pip3 install numpy</code></p>
 <p>Dermed er pakken installert!</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=0a95f297-3dc7-4b0c-9938-7010709c8e80"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Diverse-nyttig">Diverse nyttig<a class="anchor-link" href="#Diverse-nyttig">¶</a></h1>
+<h1 id="Diverse-nyttig">Diverse nyttig<a class="anchor-link" href="#Diverse-nyttig">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=cfca0e16-b806-4c0a-bafd-d54ee52300d7"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lage-en-ny-undermappe:">Lage en ny undermappe:<a class="anchor-link" href="#Lage-en-ny-undermappe:">¶</a></h2>
+<h2 id="Lage-en-ny-undermappe:">Lage en ny undermappe:<a class="anchor-link" href="#Lage-en-ny-undermappe:">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=deb15fab-cd45-4af9-9920-d22585b25dbe"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>mkdir minmappe</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=4a25204a-7319-40a8-823b-f95e803d5572"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Der <code>minmappe</code> er navnet på mappen du lager</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=ed7e20fe-9566-4617-a384-c2bd99f837d4"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="G%C3%A5-inn-i-undermappe:">Gå inn i undermappe:<a class="anchor-link" href="#G%C3%A5-inn-i-undermappe:">¶</a></h2>
+<h2 id="G%C3%A5-inn-i-undermappe:">G&#229; inn i undermappe:<a class="anchor-link" href="#G%C3%A5-inn-i-undermappe:">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=e533a58f-6c06-4fac-97b6-4789b255efa7"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>cd minmappe</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=7c3206fc-4683-4955-9912-dd8f969fbeca"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Du vil nå se at teksten foran innsetningspunktet skifter til</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=78af6da6-4641-4858-9739-21f921aebdc9"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>[&lt;brukernavn&gt;@ad.uit.no@jupyt03 minmappe]$</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=2e2130e7-cd42-4ab4-a3f0-0dc215b2adb9"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>~</code> har altså skiftet til <code>minmappe</code> fordi du nå er i mappen "minmappe".</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=64d2f489-ccb3-4ca4-8396-93548e8e45ae"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="G%C3%A5-opp-fra-undermappe">Gå opp fra undermappe<a class="anchor-link" href="#G%C3%A5-opp-fra-undermappe">¶</a></h2>
+<h2 id="G%C3%A5-opp-fra-undermappe">G&#229; opp fra undermappe<a class="anchor-link" href="#G%C3%A5-opp-fra-undermappe">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=7903a5a0-ac00-4240-b5ab-63fdec512809"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Du kan gå opp fra undermappen ved å skrive</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=3aec2eec-7ed6-410d-b72e-c67b282fc580"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>cd .. </code></p>
+<p><code>cd ..</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=bef8126e-7d18-4c1d-9170-7231209ccbe2"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Teksten foran innsetningspunktet skifter da tilbake til symbolet for rotmappen:</p>
 <p><code>[&lt;brukernavn&gt;@ad.uit.no@jupyt03 ~]$</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=c62d2fa1-80da-4d0e-8c4a-e5db7c39a37e"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Se-innhold">Se innhold<a class="anchor-link" href="#Se-innhold">¶</a></h2>
+<h2 id="Se-innhold">Se innhold<a class="anchor-link" href="#Se-innhold">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=ff4d42d0-5134-4d46-b3d6-9d1f1b6d35f2"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Du kan se innholdet av mappen du er i, ved å skrive</p>
@@ -13375,199 +13392,209 @@ div#notebook {
 <p><code>dir</code></p>
 <p><strong>Mac</strong>:</p>
 <p><code>ls</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=eab00291-3da9-4737-aaf9-7aad3ebe9544"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Slette-undermappe">Slette undermappe<a class="anchor-link" href="#Slette-undermappe">¶</a></h2>
+<h2 id="Slette-undermappe">Slette undermappe<a class="anchor-link" href="#Slette-undermappe">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=bbc5c7d1-655b-48d4-8f8b-a0e1b6d93c57"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For å slette undermappen minmappe skriver du</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=b40728e4-d986-4f38-8e5f-f8a5ec970121"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
 <pre><code>    rmdir minmappe</code></pre>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=4ba0c508-126c-454c-8e37-e5ae5f27f0c8"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Bruk aldri denne uten at du er sikker på hva du gjør. Mappen kan ikke gjenopprettes etter at den er slettet.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=8e5a4f29-1077-4c24-a3f3-58333bae8c5d"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">Fjerne en mappe og alt dets innhold (FARLIG!)<a class="anchor-link" href="#Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">¶</a></h1><p>Dersom en mappe har innhold som er vanskelig å fjerne, slik som et git-repositorie, kan det være du må da kjøre en kommando i Terminal for å fjerne mappen. Du må da kjøre en kommando i Terminal for å fjerne mappen. For å fjerne en mappe og alt innholdet, navigerer du til mappen over (se 3.), slik at om du kjører <code>dir</code> så ser du navnet på mappen (samme med eventuelt andre filer og mapper). Du kjører så</p>
-<pre><code>rm -r &lt;navn på mappe du vil ha fjernet&gt;
-</code></pre>
+<h1 id="Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">Fjerne en mappe og alt dets innhold (FARLIG!)<a class="anchor-link" href="#Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">&#182;</a></h1><p>Dersom en mappe har innhold som er vanskelig å fjerne, slik som et git-repositorie, kan det være du må da kjøre en kommando i Terminal for å fjerne mappen. Du må da kjøre en kommando i Terminal for å fjerne mappen. For å fjerne en mappe og alt innholdet, navigerer du til mappen over (se 3.), slik at om du kjører <code>dir</code> så ser du navnet på mappen (samme med eventuelt andre filer og mapper). Du kjører så</p>
+
+<pre><code>rm -r &lt;navn på mappe du vil ha fjernet&gt;</code></pre>
 <p>Bytt ut ´&lt;navn på mappe du vil ha fjernet&gt;´ med mappen du vil slette.</p>
 <p>MERK at dette sletter mappen FOR EVIG OG ALLTID! Den kan ikke gjenoprettes, så VÆR HELT SIKKER før du gjør dette. Du må være HELT sikker på hvor du er i mappestrukturen i terminal, slik at du ikke sletter noe uforvarende.</p>
 <p>Når du har kjørt kommandoen, vil du få gjentatte spørsmål om du vil slette hver enkelt fil. Trykk <code>y</code> og Enter på hvert spørsmål. </p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=f201471d-feba-479b-9476-4def60d81815"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Git">Git<a class="anchor-link" href="#Git">¶</a></h1>
+<h1 id="Git">Git<a class="anchor-link" href="#Git">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=6fc27ce5-eb6c-4fcd-bfa9-25e71320b2e5"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">Hvordan sørge for at du alltid har siste versjon?<a class="anchor-link" href="#Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">¶</a></h2>
+<h2 id="Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">Hvordan s&#248;rge for at du alltid har siste versjon?<a class="anchor-link" href="#Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=02a0e96a-1089-4ea8-8543-5987ce1c82dd"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Det kan å bli endringer i notatene undervegs, så det vil bli behov for å laste ned fra <code>github</code> på nytt. Om du har gjort notater i eksisterende notatbok, og du ønsker å beholde dem, gir du denne mappen et annet navn enn <code>notebooks</code>, og kloner en ny versjon av <code>notebooks</code>repositoriet slik som beskrevet i  <a href="0%20-%20installasjon%20og%20tips.html">installasjonsveiledningen i kapittel 0</a> .</p>
 <p>For å oppdatere repositoriet til siste versjon gjør du</p>
-<pre><code>[user@jupty02 notebooks]$ git pull
-</code></pre>
+
+<pre><code>[user@jupty02 notebooks]$ git pull</code></pre>
 <p>Merk at du må "være" i mappen <code>notebooks</code> i kommandovinduet (<code>notebooks</code>skal vises til venstre på linjen du skriver på). Om du nettopp har klonet må navigere inn i notebooksmappen med</p>
-<pre><code>[user@jupty02 notebooks]$ cd notebooks
-</code></pre>
+
+<pre><code>[user@jupty02 notebooks]$ cd notebooks</code></pre>
 <p>Om du nå har gjort endringer i den samme <code>notbooks</code>-mappen som du forsøker å oppdatere, kan du får følgende melding:</p>
 <p><code>Your local changes to the following files would be overwritten by merge:</code></p>
-<p>For å tvinge gjennom en oppdatering kan du da gjøre følgende ( <span style="color:red">MERK!!!!! alt innhold i den mappen du er i vil BLI SLETTET og ERSTATTET med innholdet i <code>notebooks</code> på github. Vær derfor HELT sikker på at du er i riktig mappe (det SKAL stå <code>notebooks</code> sist i promtet slik: <code>[user@jupty02 notebooks]$</code>)</span>):</p>
-<pre><code>[user@jupty02 notebooks]$ git reset --hard
-</code></pre>
+<p>For å tvinge gjennom en oppdatering kan du da gjøre følgende ( <span style="color:red">MERK!!!!! alt innhold i den mappen du er i vil BLI SLETTET og ERSTATTET med innholdet i `notebooks` på github. Vær derfor HELT sikker på at du er i riktig mappe (det SKAL stå `notebooks` sist i promtet slik: `[user@jupty02 notebooks]$`)</span>):</p>
+
+<pre><code>[user@jupty02 notebooks]$ git reset --hard</code></pre>
 <p>Så kjører du en <code>git pull</code> igjen. Da resettes repositoriet til den versjonen som ligger på github.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=ac373348-ae07-471c-8931-43dff6ffb3d6"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Klone-dette-repositoriet:">Klone dette repositoriet:<a class="anchor-link" href="#Klone-dette-repositoriet:">¶</a></h2><pre><code>git clone https://github.com/uit-sok-1003-h21/notebooks/
-</code></pre>
+<h2 id="Klone-dette-repositoriet:">Klone dette repositoriet:<a class="anchor-link" href="#Klone-dette-repositoriet:">&#182;</a></h2>
+<pre><code>git clone https://github.com/uit-sok-1003-h21/notebooks/</code></pre>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=a4d1164b-d6db-4cea-9f8b-6454a440428a"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hente-siste-versjon-(pull):">Hente siste versjon (pull):<a class="anchor-link" href="#Hente-siste-versjon-(pull):">¶</a></h2><p>Slik hetner du siste versjon:</p>
-<pre><code>git pull
-</code></pre>
+<h2 id="Hente-siste-versjon-(pull):">Hente siste versjon (pull):<a class="anchor-link" href="#Hente-siste-versjon-(pull):">&#182;</a></h2><p>Slik hetner du siste versjon:</p>
+
+<pre><code>git pull</code></pre>
 <ol>
-<li>Om filer er endret, og du ønsker å overskrive endringene:</li>
-</ol>
+<li><p>Om filer er endret, og du ønsker å overskrive endringene:</p>
+
 <pre><code>git reset --hard
-git pull
-</code></pre>
-<ol start="2">
-<li>Om filer er endret, og du ønsker å overskrive endringene, men også ta vare på endringer.</li>
+git pull</code></pre>
+</li>
+<li><p>Om filer er endret, og du ønsker å overskrive endringene, men også ta vare på endringer.</p>
+
+<pre><code>git stash</code></pre>
+</li>
 </ol>
-<pre><code>git stash
-</code></pre>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=15806fe3-f015-4353-a303-bd154e6bb5cc"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lage-git-repositorie:">Lage git-repositorie:<a class="anchor-link" href="#Lage-git-repositorie:">¶</a></h2><p><a href="https://uit-sok-1003-h21.github.io/github.html">Se her for en forklaring på hvordan du skal levere arbeidskrav på github</a></p>
+<h2 id="Lage-git-repositorie:">Lage git-repositorie:<a class="anchor-link" href="#Lage-git-repositorie:">&#182;</a></h2><p><a href="https://uit-sok-1003-h21.github.io/github.html">Se her for en forklaring på hvordan du skal levere arbeidskrav på github</a></p>
 <ol>
 <li>Lag en githubkonto (du trenger ikke bruke din uit-mail, det er valgfritt)</li>
 <li>Start Jupyter, og åpne ny Terminal (+), og naviger dit du vil ha repositoriet på jupyter med <code>cd &lt;mappenavn&gt;</code>.</li>
-<li>Konfigurer git med e-posten til kontoen og ditt brukernavn (bytt ut klammeparentesene med e-posten og brukernavnet til githubkontoen):</li>
-</ol>
+<li>Konfigurer git med e-posten til kontoen og ditt brukernavn (bytt ut klammeparentesene med e-posten og brukernavnet til githubkontoen):
 <pre><code>git config --global user.email "&lt;e-post&gt;"
-git config --global user.name "&lt;brukernavn&gt;"
-</code></pre>
-<ol start="4">
-<li>Gå til <strong>Repositories</strong>, trykk <strong>New</strong>, gi repositoriet et navn og velg <strong>Private</strong> eller <strong>Public</strong>.</li>
+git config --global user.name "&lt;brukernavn&gt;"</code></pre>
+</li>
+<li>Gå til <strong>Repositories</strong>, trykk <strong>New</strong>, gi repositoriet et navn og velg <strong>Private</strong> eller <strong>Public</strong>. </li>
 <li>Hold denne fanen åpen, for du skal bruke html-adressen til denne siden.</li>
 <li>Sørg for at du har et token. Gå eventuelt til <a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a> for å generere nytt token. <em>Hold fanen åpen for å ha tokenet tilgjengelig.</em></li>
-<li>kjør <code>git clone https://&lt;token&gt;@github.com/&lt;sti&gt;</code> der &lt;token&gt; er tokenet er det du fikk i 6. og &lt;sti&gt; er det som kommer etter <strong>github.com/</strong>  i html-adressen i 5.</li>
+<li><p>kjør <code>git clone https://&lt;token&gt;@github.com/&lt;sti&gt;</code> der \&lt;token&gt; er tokenet er det du fikk i 6. og \&lt;sti&gt; er det som kommer etter <strong>github.com/</strong>  i html-adressen i 5.</p>
+<p>Du kan nå redigere repositoriet ditt<br><br></p>
+</li>
 </ol>
-<p>Du kan nå redigere repositoriet ditt<br/><br/></p>
-<p><strong>NYTTIG TIPS!</strong> Om du glemte å legge inn tokenet da du klonet, kan du legge det inn etterpå med denne kommandoen:<br/></p>
-<pre><code>git remote set-url origin https://&lt;token&gt;@github.com/&lt;sti&gt;
-</code></pre>
-<p><br/><br/></p>
+<p><strong>NYTTIG TIPS!</strong> Om du glemte å legge inn tokenet da du klonet, kan du legge det inn etterpå med denne kommandoen:<br></p>
+
+<pre><code>git remote set-url origin https://&lt;token&gt;@github.com/&lt;sti&gt;</code></pre>
+<p><br><br></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=f679eea8-c1f8-4776-b0b0-e08fea3edff8"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dytte-repositoriet-til-github:">Dytte repositoriet til github:<a class="anchor-link" href="#Dytte-repositoriet-til-github:">¶</a></h2><ol>
+<h2 id="Dytte-repositoriet-til-github:">Dytte repositoriet til github:<a class="anchor-link" href="#Dytte-repositoriet-til-github:">&#182;</a></h2><ol>
 <li>Ta en sikkerhetskopi av filene dine (egentlig ikke nødvendig om man kan git, men det er en enkel måte å unngå problemer)</li>
 <li>Naviger til repositoriemappen i Terminal (se avsnitt 1.)</li>
-<li>Kjør i Terminal:</li>
-</ol>
+<li>Kjør i Terminal:
 <pre><code>git pull
 git add .
 git commit -m "New repository"
-git push 
-</code></pre>
+git push</code></pre>
+</li>
+</ol>
 <p>Dersom du får en rettighetsfeil kan du forsøke å legge inn, etter <code>git push</code>, nettadressen som beskrevet over.</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=7982c3e5-d991-4e27-af1a-e3c454a871fa"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installere-geopandas-p%C3%A5-windows">Installere geopandas på windows<a class="anchor-link" href="#Installere-geopandas-p%C3%A5-windows">¶</a></h1><p>Geopandas er ikke helt rett frem å installere på windows. Har du en linux eller Mac skal det bare være å kjøre henholdsvis <code>pip install geopandas</code> eller <code>pip3 install geopandas</code>. Du kan kjøre samme kommando på windows, men pakken vil sannsynligvis ikke fungere. Enda verre er det at dersom du gjør det, må du kanskje gå tilbake etterpå og avinstallere såkalte "dependencies", så det beste er å følge følgende oppskrift, uten å forsøke <code>pip install</code> først.</p>
-<ol>
-<li>Gå til <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a> og last ned følgende pakker (søk etter dem med ctrl+F, og skriv inn navnene etter tur):</li>
-</ol>
+<h1 id="Installere-geopandas-p%C3%A5-windows">Installere geopandas p&#229; windows<a class="anchor-link" href="#Installere-geopandas-p%C3%A5-windows">&#182;</a></h1><p>Geopandas er ikke helt rett frem å installere på windows. Har du en linux eller Mac skal det bare være å kjøre henholdsvis <code>pip install geopandas</code> eller <code>pip3 install geopandas</code>. Du kan kjøre samme kommando på windows, men pakken vil sannsynligvis ikke fungere. Enda verre er det at dersom du gjør det, må du kanskje gå tilbake etterpå og avinstallere såkalte "dependencies", så det beste er å følge følgende oppskrift, uten å forsøke <code>pip install</code> først.</p>
+<p>1) Gå til <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a> og last ned følgende pakker (søk etter dem med ctrl+F, og skriv inn navnene etter tur):</p>
 <ul>
 <li>GDAL, Fiona, pyproj, rtree og shapely</li>
 </ul>
-<ol start="2">
-<li>Last alle pakken ned til din "Downloads"-mappe</li>
-</ol>
+<p>2) Last alle pakken ned til din "Downloads"-mappe</p>
 <ul>
 <li>Hver pakke har en rekke ulike versjoner. Sørg for at følgende stemmer:<ul>
-<li>velg et versjonsnummer som stemmer med pythonversjonen du bruker.</li>
+<li>velg et versjonsnummer som stemmer med pythonversjonen du bruker. </li>
 <li>velg en pakke med "cp" foran versjonsnummer</li>
-<li>velg riktig antall bit for din maksin, enten 32 eller 64. Stort sett alle maskiner har 64 bit i dag.</li>
+<li>velg riktig antall bit for din maksin, enten 32 eller 64. Stort sett alle maskiner har 64 bit i dag. </li>
 <li>For eksempel har du python 3.8 og en 64bit maskin, velger du for GDAL filen <strong>"GDAL‑3.4.1‑cp38‑cp38‑win_amd64.whl"</strong></li>
 </ul>
 </li>
 </ul>
-<ol start="3">
-<li>installer pakkene i rekkefølgen GDAL, Fiona, pyproj, rtree og shapely</li>
-</ol>
+<p>3) installer pakkene i rekkefølgen GDAL, Fiona, pyproj, rtree og shapely</p>
 <ul>
 <li>Åpne kommandovinduet med adminrettigheter og naviger med <code>cd</code> til du er i "Dwnloads"-mappen</li>
-<li>"Downloads"-mappen ligger normalt på <strong>C:\Users&lt;brukernavn&gt;\Downloads</strong></li>
+<li>"Downloads"-mappen ligger normalt på <strong>C:\Users\<brukernavn>\Downloads</strong></li>
 <li>skriv inn <code>pip install "&lt;navn på pakke&gt;"</code></li>
 <li>for å installere GDAL for python 3.8 og 64 bit skriver du for eksempel: <code>pip install "GDAL‑3.4.1‑cp38‑cp38‑win_amd64.whl"</code></li>
 </ul>
-<ol start="4">
-<li>kjør <code>pip install geopandas</code></li>
-</ol>
+<p>4) kjør <code>pip install geopandas</code></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered" id="cell-id=419a61c7-7c93-444c-8c3f-b6716c7c5220"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3CForrige----%7C-----Neste-%3E"><span style="color:lightgrey">&lt;Forrige </span>   |     <a href="1%20-%20introduksjon.html">Neste &gt;</a><a class="anchor-link" href="#%3CForrige----%7C-----Neste-%3E">¶</a></h5>
+<h5><span style="color:lightgrey">\<Forrige </span>   |     <a href="1%20-%20introduksjon.html">Neste &gt;</a></h5>
+
 </div>
 </div>
 </div>
-</div>
-</div>
-</main>
+    </div>
+  </div>
 </body>
+
+
+
+
+ 
+
+
 </html>
