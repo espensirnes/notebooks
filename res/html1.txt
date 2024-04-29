@@ -76,7 +76,8 @@
 		<br><br>
 	</p>
 	
-	Her kommer slideren og bildet. Formateringen er feil fordi teksten er satt utenfor &ltp&gt-taggen
+	Her kommer slideren og bildet. Formateringen akkurat her er feil fordi 
+teksten er satt utenfor &ltp&gt-taggen
 	<div class="content">
 
   
